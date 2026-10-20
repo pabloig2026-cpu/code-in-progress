@@ -1,0 +1,53 @@
+:root {
+  --bs-body-font-family: "Plus Jakarta Sans", sans-serif !important;
+}
+
+.fuente-tipografia {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+:root {
+  --rojo: #e0202a; /* rojo Rolling | botones, etiquetas, números grandes, íconos, hora de la agenda. */
+  --superficie: #ffffff; /* Reemplaza por tu color de fondo */
+  --rojo-oscuro: #a50d14; /* parte media del degradado */
+  --rojo-profundo: #6e070c; /* final del degradado */
+  --negro: #0b0b0c; /* fondo de toda la página, menú, tarjeta negra del hero. */
+  --superficie: #111113; /* tarjetas de speakers, barra de datos clave, tarjetas de precios. */
+  --chip: #26262a; /* chips de los speakers. */
+  --borde: #2c2c31; /* líneas y bordes de tarjetas. */
+  --borde-chip: #3a3a40; /* chips del hero y banner de publicidad. */
+}
+/*
+
+Textos
+Blanco #ffffff | títulos y botones.
+
+Texto suave #d4d4d8 | variable --texto | párrafos y descripciones.
+
+Texto apagado #a1a1aa | variable --texto-suave | nombre del speaker en la agenda, textos secundarios.
+
+Texto sobre rojo #ffe9ea | párrafo del hero.
+
+Reglas rápidas
+Fondo de página: siempre #0b0b0c.
+
+Todo lo que sea "tarjeta" va en #111113 con borde #2c2c31.
+
+El rojo se usa para llamar la atención: botones, números y etiquetas. No lo uses de fondo grande salvo el degradado.
+
+Texto gris sobre fondo oscuro: nunca más oscuro que #a1a1aa (si no, no se lee).
+
+Dentro de la tarjeta blanca del checkout el texto va en #0b0b0c.
+
+*/
+/* 2. Luego las aplicas a los elementos que quieras */
+.mi-clase {
+  color: var(--rojo);
+  background-color: var(--superficie);
+}
+
+/* 2. Luego las aplicas a los elementos que quieras */
+.mi-clase {
+  color: var(--rojo);
+  background-color: var(--superficie);
+}
