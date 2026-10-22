@@ -1,0 +1,7 @@
+.navbar {display: flex
+; justify-content: space-between;
+text-decoration: none;}
+.formu-nav ul li a{ display: block;
+   text-decoration: none;}
+.boton-nav a { background-color: red; 
+  color: white;}
