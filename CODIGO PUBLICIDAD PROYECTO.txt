@@ -1,0 +1,182 @@
+CODIGO PUBLICIDAD PROYECTO
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=h, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,800;1,300&display=swap"
+    rel="stylesheet">
+  </link>
+  <link rel="stylesheet" href="./style/index.css">
+
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container d-flex justify-content-between align-items-center"></div>
+    <ul>
+      <li><a href="./"></a></li>
+    </ul>
+  </nav>
+
+
+  <main class="container my-5">
+
+    /*para las imagenes de cartelera productos*/
+    <section class="card border-0 rounded-4 text-white p-4 p-md-5 mb-4"
+      style="background: linear-gradient(160deg, #e0202a 0%, #a50d14 55%, #6e070c 100%);">
+      <div class="row align-items-center g-4">
+
+        <div class="col-lg-7">
+          <span class="workshop">WORKSHOP</span><span class="palabras-titulos">
+            ENTRADAS LIMITADAS
+          </span>
+          <h1 class="titulo-h1 text-uppercase my-3">
+            ¿POR DÓNDE<br>
+            EMPIEZO A<br>
+            <span style="color: #5c0003;">PROGRAMAR?</span>
+          </h1>
+          <p class="parrafo">
+            Una tarde con diez speakers de Rolling Code School para ordenar tus primeros pasos: qué aprender, cómo
+            practicar y cómo mostrar lo que sabés.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="FALTA LINKEAR" class="btn btn-dark rounded-pill px-4 fw-bold">Comprar entrada</a>
+            <a href="FALTA LINKEAR" class="btn btn-outline-light rounded-pill px-4 fw-bold">Ver agenda</a>
+          </div>
+        </div>
+
+
+        <div class="col-lg-5">
+          <div class="bg-dark text-white p-4 rounded-4 shadow">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <img src="./iconos/calendario.svg" alt="img" class="fs-3"></img>
+              <div>
+                <h5 class="mb-0 fw-bold">JUE 19/11</h5>
+                <small class="text-secondary">18.00 hs</small>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <img src="./iconos/ubicacion.svg" alt="img" class="fs-3"></img>
+              <div>
+                <h5 class="mb-0 fw-bold">Rolling Code School</h5>
+                <small class="text-secondary">Gral. Paz 576, Entrepiso</small>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <img src="./iconos/entrada.svg" alt="img" class="fs-3"></img>
+              <div>
+                <h5 class="mb-0 fw-bold">Entradas desde $15.000</h5>
+                <small class="text-secondary">Early Bird hasta el 31/10</small>
+              </div>
+            </div>
+            <div class="d-flex gap-2 flex-wrap">
+              <span class="badge bg-secondary rounded-pill px-3 py-2">Presencial</span>
+              <span class="badge bg-secondary rounded-pill px-3 py-2">Virtual</span>
+              <span class="badge bg-danger rounded-pill px-3 py-2">Cupos limitados</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    /*-- barra bajo publicidad --*/
+    <section class="bg-dark text-white rounded-4 p-4">
+      <div class="row text-center text-md-start g-3">
+        <div class="col-6 col-md-3 d-flex flex-column gap-1">
+          <span class="display-6 fw-bold text-danger">120</span>
+          <small class="text-secondary">lugares presenciales</small>
+        </div>
+        <div class="col-6 col-md-3 d-flex flex-column gap-1">
+          <span class="display-6 fw-bold text-danger">10</span>
+          <small class="text-secondary">charlas de speakers</small>
+        </div>
+        <div class="col-6 col-md-3 d-flex flex-column gap-1">
+          <span class="display-6 fw-bold text-danger">3 h 40</span>
+          <small class="text-secondary">de 18.00 a 21.40 hs</small>
+        </div>
+        <div class="col-6 col-md-3 d-flex flex-column gap-1">
+          <span class="display-6 fw-bold text-danger">2</span>
+          <small class="text-secondary">modalidades: presencial y virtual</small>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+
+</body>
+
+</html>
+
+
+
+
+CSS
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+p {
+  font-weight: 400;
+}
+
+/* ver que lo pongan en el navbar*/
+.nav-link {
+  font-weight: 600;
+}
+
+.titulo-h1 {
+  font-weight: 800;
+  font-size: 88px;
+  line-height: 1.02;
+  letter-spacing: -1.5px;
+}
+
+@media(max-width:768px) {
+  .titulo-h1 {
+    font-size: 40px;
+  }
+}
+
+.workshop {
+  font-weight: 300;
+  font-style: italic;
+}
+
+.parrafo {
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+.palabras-titulos {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.numero-grande {
+  font-size: 80px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+@media(max-width:767px) {
+  .numero-grande {
+    font-size: 48px;
+  }
+}
+
+.texto-chico {
+  font-size: 14px;
+}
