@@ -1,28 +1,3 @@
-:root {
-  --rojo: #e0202a; /* rojo Rolling | botones, etiquetas, números grandes, íconos, hora de la agenda. */
-  --superficie: #ffffff; /* Reemplaza por tu color de fondo */
-  --rojo-oscuro: #a50d14; /* parte media del degradado */
-  --rojo-profundo: #6e070c; /* final del degradado */
-  --negro: #0b0b0c; /* fondo de toda la página, menú, tarjeta negra del hero. */
-  --superficie: #111113; /* tarjetas de speakers, barra de datos clave, tarjetas de precios. */
-  --chip: #26262a; /* chips de los speakers. */
-  --borde: #2c2c31; /* líneas y bordes de tarjetas. */
-  --borde-chip: #3a3a40; /* chips del hero y banner de publicidad. */
-}
-
-:root {
-  --bg: #0b0b0c;
-  --surface: #141416;
-  --road: #242427;
-  --border: #242427;
-  --red: #ed202b;
-  --text: #f7f7f8;
-  --muted: #a5a5ab;
-}
-
-/* =========================
-   CONFIGURACIÓN GENERAL
-========================= */
 
 :root {
   --background: #0b0b0c;
@@ -84,7 +59,6 @@ input:focus-visible {
 
 /* =========================
    ENCABEZADO
-========================= */
 
 .header {
   padding-top: 44px;
@@ -192,7 +166,6 @@ input:focus-visible {
 
 /* =========================
    TARJETAS DE ENTRADAS
-========================= */
 
 .tickets {
   display: grid;
@@ -366,7 +339,6 @@ input:focus-visible {
 
 /* =========================
    FINALIZAR COMPRA
-========================= */
 
 .purchase-section {
   margin: 0 -16px 70px;
@@ -575,7 +547,6 @@ input:focus-visible {
 
 /* =========================
    UBICACIÓN Y MAPA
-========================= */
 
 .location-section {
   display: grid;
@@ -756,7 +727,6 @@ input:focus-visible {
 
 /* =========================
    FOOTER
-========================= */
 
 .footer {
   display: flex;
@@ -836,7 +806,6 @@ logo de la rooling en el footer
 
 /* =========================
    RESPONSIVE
-========================= */
 
 @media (max-width: 850px) {
   .countdown-card {
@@ -1018,4 +987,94 @@ logo de la rooling en el footer
     min-height: 320px;
     border: 0;
   }
+}
+#speakers {
+    background-color: #000000;
+    color: white;
+    padding-top: 96px;
+    padding-bottom: 96px;
+    padding-left: 20px;
+}
+
+.speakers-etiqueta {
+    color: #e0202a;
+    font-size: 16px;
+    letter-spacing: 3px;
+    font-weight: 800;
+}
+
+#speakers h2 {
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.speaker-card {
+    width: 224px;
+    background-color: #111113;
+    border: 1px solid #2c2c31;
+    border-radius: 28px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.speaker-card img {
+    width: 190px;
+    height: 190px;
+    border-radius: 22px;
+    object-fit: cover;
+}
+
+.speaker-card h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    margin-top: 16px;
+    margin-bottom: 10px;
+}
+
+.speaker-chip {
+    display: inline-block;
+    background-color: #26262a;
+    color: white;
+    font-size: 15px;
+    font-weight: 800;
+    padding: 6px 10px;
+    border-radius: 20px;
+}
+
+.speaker-card p {
+    color: #d4d4d8;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+#speakers {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.speakers-lista {
+    gap: 20px;
+}
+.speaker-card:first-child .speaker-chip {
+    background-color: #e0202a;
+}
+body {
+    background-color: #000000;
+    margin: 0;
+}
+#speakers > .speakers-etiqueta,
+#speakers > h2 {
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.speaker-card {
+    transition: transform 0.3s ease;
+}
+
+.speaker-card:hover {
+    transform: scale(1.15);
 }
