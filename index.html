@@ -133,5 +133,397 @@
       </article>
       </div>
     </section>
+
+      
+    
+    
+    
+    <!-- ENCABEZADO -->
+    
+<section class="header container">
+
+    <span class="eyebrow">UNA EXPERIENCIA ÚNICA</span>
+    <h1>El evento que estabas esperando.</h1>
+
+    <section class="countdown-card">
+        <div class="countdown-info">
+            <span class="eyebrow">PRÓXIMO EVENTO</span>
+            <h3>¡Nos vemos muy pronto!</h3>
+            <p>Prepará todo para vivir una noche inolvidable.</p>
+        </div>
+
+        <div class="countdown">
+            <div class="time-box">
+                <strong id="days">00</strong>
+                <span>DÍAS</span>
+            </div>
+
+            <div class="time-box">
+                <strong id="hours">00</strong>
+                <span>HORAS</span>
+            </div>
+
+            <div class="time-box">
+                <strong id="minutes">00</strong>
+                <span>MIN</span>
+            </div>
+
+            <div class="time-box">
+                <strong id="seconds">00</strong>
+                <span>SEG</span>
+            </div>
+        </div>
+
+        <div class="progress-info">
+            <div class="progress-label">
+                <span>Entradas vendidas</span>
+                <span>63%</span>
+            </div>
+            <div class="progress-track">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </section>
+
+</section>
+
+    <main class="container">
+      <!-- ENTRADAS -->
+      <section class="tickets" id="entradas">
+        <article class="ticket">
+          <div class="ticket-top">
+            <span class="ticket-type">Entrada General</span>
+            <span class="pill">GENERAL</span>
+          </div>
+
+          <div class="price">
+            <strong>$15.000</strong>
+          </div>
+
+          <p class="ticket-description">
+            Disfrutá del evento con tu entrada general.
+          </p>
+
+          <ul class="benefits">
+            <li>Acceso al evento</li>
+            <li>Acceso a sectores generales</li>
+            <li>Entrada digital</li>
+          </ul>
+
+          <a href="#comprar" class="button button-outline"> Comprar entrada </a>
+        </article>
+
+        <article class="ticket ticket-featured">
+          <div class="ticket-top">
+            <span class="ticket-type">Entrada VIP</span>
+            <span class="pill">MÁS ELEGIDA</span>
+          </div>
+
+          <div class="price">
+            <strong>$25.000</strong>
+            <del>$30.000</del>
+          </div>
+
+          <p class="ticket-description">Una experiencia exclusiva para vos.</p>
+
+          <ul class="benefits">
+            <li>Todos los beneficios de General</li>
+            <li>Acceso al sector VIP</li>
+            <li>Ingreso prioritario</li>
+            <li>Experiencia exclusiva</li>
+          </ul>
+
+          <a href="#comprar" class="button button-white">
+            Elegir entrada VIP
+          </a>
+        </article>
+
+        <article class="ticket ticket-virtual">
+          <div class="ticket-top">
+            <span class="ticket-type">Entrada Virtual</span>
+            <span class="pill">ONLINE</span>
+          </div>
+
+          <div class="price">
+            <strong>$8.000</strong>
+          </div>
+
+          <p class="ticket-description">
+            Viví la experiencia desde cualquier lugar.
+          </p>
+
+          <ul class="benefits">
+            <li>Acceso virtual al evento</li>
+            <li>Visualización desde tus dispositivos</li>
+            <li>Confirmación digital</li>
+          </ul>
+
+          <a href="#comprar" class="button button-outline">
+            Comprar acceso virtual
+          </a>
+        </article>
+      </section>
+
+      <!-- COMPRA -->
+      <section class="purchase-section" id="comprar">
+        <div class="purchase-heading">
+          <span class="eyebrow">RESERVÁ TU LUGAR</span>
+          <h2>Conseguí tus entradas.</h2>
+        </div>
+
+        <div class="purchase-layout">
+          <form class="purchase-form" action="#" method="get">
+            <h3>1. Elegí tu entrada</h3>
+
+            <label class="ticket-option selected">
+              <input type="radio" name="ticket" value="general" checked />
+              <span>
+                <strong>Entrada General</strong>
+                <small>Acceso general al evento</small>
+              </span>
+              <strong>$15.000</strong>
+            </label>
+
+            <label class="ticket-option">
+              <input type="radio" name="ticket" value="vip" />
+              <span>
+                <strong>Entrada VIP</strong>
+                <small>Acceso prioritario y sector VIP</small>
+              </span>
+              <strong>$25.000</strong>
+            </label>
+
+            <label class="ticket-option">
+              <input type="radio" name="ticket" value="virtual" />
+              <span>
+                <strong>Entrada Virtual</strong>
+                <small>Acceso online al evento</small>
+              </span>
+              <strong>$8.000</strong>
+            </label>
+
+            <div class="quantity-section">
+              <label for="quantity">Cantidad de entradas</label>
+
+              <div class="quantity-control">
+                <button type="button" disabled aria-label="Disminuir cantidad">
+                  −
+                </button>
+
+                <input
+                  type="number"
+                  id="quantity"
+                  name="quantity"
+                  value="1"
+                  min="1"
+                  max="10"
+                  aria-label="Cantidad de entradas"
+                />
+
+                <button type="button" disabled aria-label="Aumentar cantidad">
+                  +
+                </button>
+              </div>
+            </div>
+
+            <button type="submit" class="button button-dark">
+              Continuar con la compra
+            </button>
+
+            <p class="form-note">
+              Seleccioná tu entrada y revisá las opciones disponibles.
+            </p>
+          </form>
+
+          <!-- RESUMEN -->
+          <aside class="order-summary">
+            <span class="eyebrow">RESUMEN DEL PEDIDO</span>
+            <h3>Tu experiencia comienza acá.</h3>
+
+            <p class="order-date">Fecha y horario a confirmar</p>
+
+            <div class="summary-line">
+              <span>Tipo de entrada</span>
+              <span>General</span>
+            </div>
+
+            <div class="summary-line">
+              <span>Precio unitario</span>
+              <span>$15.000</span>
+            </div>
+
+            <div class="summary-line">
+              <span>Cantidad</span>
+              <span>1</span>
+            </div>
+
+            <div class="summary-divider"></div>
+
+            <div class="summary-total">
+              <strong>Total</strong>
+              <strong>$15.000</strong>
+            </div>
+
+            <p class="secure-note">
+              <span>●</span>
+              Compra pendiente de confirmación.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- UBICACIÓN -->
+      <section class="location-section" id="ubicacion">
+        <div class="location-info">
+          <span class="eyebrow">DÓNDE NOS ENCONTRAMOS</span>
+          <h2>Nos vemos en el evento.</h2>
+
+          <div class="address">
+            <span class="map-pin" aria-hidden="true">⌖</span>
+
+          <div>
+              <strong>Ubicación del evento</strong>
+              <p>Agregá aquí la dirección del lugar.</p>
+            </div>
+          </div> 
+
+          <div class="event-tags">
+            <span>Evento presencial</span>
+            <span>Entradas digitales</span>
+            <span>Experiencia VIP</span>
+          </div>
+
+          <div class="location-buttons">
+            <a
+              class="button button-red"
+              href="https://www.google.com/maps"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Cómo llegar
+            </a>
+
+            <a class="button button-outline" href="#entradas"> Ver entradas </a>
+          </div>
+        </div>
+<!-- 
+clase contenedora del mapa
+ -->
+
+        <div class="map-placeholder">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.105916739557!2d-65.207167!3d-26.836583299999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225d3ad7f30f1d%3A0xf8606cd659b8e3e4!2sRollingCode%20School!5e0!3m2!1ses-419!2sar!4v1792697227932!5m2!1ses-419!2sar" 
+        width="100%"
+        height="100%"
+        style="border:0; position:absolute; inset:0;"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Ubicación del evento en Google Maps">
+    </iframe>
+    <div class="map-marker">
+            <span></span>
+          </div> 
+          <div class="map-caption">
+            <strong>Ubicación del evento</strong>
+            <span>La dirección se actualizará próximamente.</span>
+          </div>
+        </div> 
+    </div>
+    
+    
+</div>
+
+    
+      </section>
+    </main>
+<!-- 
+     PIE DE PÁGINA 
+    <footer class="footer container">
+
+
+      <a class="footer-brand" href="./index.html">
+  <img
+    src="./logo/logo-rolling-blanco.png"
+    alt="Evento Exclusivo"
+    class="footer-logo"
+  >
+</a>
+      
+      <p class="footer-copy">
+        © 2026 Evento Exclusivo. Todos los derechos reservados.
+      </p>
+
+      <nav class="social-links" aria-label="Redes sociales">
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+          >IG</a
+        >
+
+        <a
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+          >f</a
+        >
+
+        <a
+          href="https://www.tiktok.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok"
+          >Tk</a
+        >
+      </nav>
+    </footer>
+  -->
+
+<script>
+const eventDate = new Date("2026-10-25T20:00:00-03:00").getTime();
+
+function updateCountdown() {
+    const now = Date.now();
+    const difference = eventDate - now;
+
+    const days = document.getElementById("days");
+    const hours = document.getElementById("hours");
+    const minutes = document.getElementById("minutes");
+    const seconds = document.getElementById("seconds");
+
+    if (difference <= 0) {
+        days.textContent = "00";
+        hours.textContent = "00";
+        minutes.textContent = "00";
+        seconds.textContent = "00";
+        return;
+    }
+
+    days.textContent = Math.floor(
+        difference / (1000 * 60 * 60 * 24)
+    );
+
+    hours.textContent = Math.floor(
+        (difference / (1000 * 60 * 60)) % 24
+    ).toString().padStart(2, "0");
+
+    minutes.textContent = Math.floor(
+        (difference / (1000 * 60)) % 60
+    ).toString().padStart(2, "0");
+
+    seconds.textContent = Math.floor(
+        (difference / 1000) % 60
+    ).toString().padStart(2, "0");
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+</script>
+
+
+
   </body>
 </html>
