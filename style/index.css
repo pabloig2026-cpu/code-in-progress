@@ -88,3 +88,7 @@ body {
 .speaker-card:hover {
     transform: scale(1.15);
 }
+.speaker-card img {
+  object-fit: cover;
+  object-position: center top;
+}
