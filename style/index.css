@@ -81,8 +81,8 @@ body {
   line-height: 1.5;
 }
 
-#speakers>.speakers-etiqueta,
-#speakers>h2 {
+#speakers > .speakers-etiqueta,
+#speakers > h2 {
   max-width: 1180px;
   margin-left: auto;
   margin-right: auto;
@@ -229,7 +229,6 @@ body {
 }
 
 @media (max-width: 991px) {
-
   .col-lg-4,
   .col-lg-8 {
     flex: 0 0 100%;
@@ -728,7 +727,7 @@ input:focus-visible {
   accent-color: var(--red);
 }
 
-.ticket-option>span {
+.ticket-option > span {
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -736,8 +735,8 @@ input:focus-visible {
   min-width: 0;
 }
 
-.ticket-option>span strong,
-.ticket-option>strong {
+.ticket-option > span strong,
+.ticket-option > strong {
   font-size: 12px;
 }
 
@@ -753,7 +752,7 @@ input:focus-visible {
   margin: 22px 0;
 }
 
-.quantity-section>label {
+.quantity-section > label {
   font-size: 12px;
   font-weight: 700;
 }
@@ -1243,8 +1242,8 @@ logo de la rooling en el footer
     padding: 11px 8px;
   }
 
-  .ticket-option>span strong,
-  .ticket-option>strong {
+  .ticket-option > span strong,
+  .ticket-option > strong {
     font-size: 11px;
   }
 
@@ -1395,7 +1394,7 @@ logo de la rooling en el footer
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
 }
 
 p {
@@ -1414,10 +1413,19 @@ p {
   letter-spacing: -1.5px;
 }
 
-@media(max-width:768px) {
+@media (max-width: 768px) {
   .titulo-h1 {
     font-size: 40px;
   }
+}
+
+.workshop-card {
+  background: linear-gradient(180deg, #e0202a 0%, #a50d14 55%, #6e070c 100%);
+}
+
+.span-workshop {
+  color: #0b0b0c;
+  font-size: 85px;
 }
 
 .workshop {
@@ -1443,7 +1451,7 @@ p {
   line-height: 1;
 }
 
-@media(max-width:767px) {
+@media (max-width: 767px) {
   .numero-grande {
     font-size: 48px;
   }
@@ -1451,4 +1459,143 @@ p {
 
 .texto-chico {
   font-size: 14px;
+}
+
+/* willy */
+.navbar {
+  min-height: 93px;
+  /* Usamos min-height para permitir que se expanda en celular */
+  background-color: #0b0b0c;
+  border-bottom: 1px solid #2c2c31;
+  padding: 12px 0;
+}
+
+.navbar img {
+  height: 52px;
+  width: auto;
+  display: block;
+}
+
+/* En celulares (menores a 992px), alineamos todo centrado y hacia abajo */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 16px;
+    margin: 0 0 1.5rem 0;
+    /* Margen inferior para separarlo del botón */
+    padding: 0;
+  }
+
+  .boton-comprar {
+    margin: 0 auto;
+    /* Centra el botón en móviles */
+  }
+}
+
+/* En pantallas grandes (PC) mantenemos tu diseño horizontal original */
+@media (min-width: 992px) {
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+    margin: 0 0 0 auto;
+    padding: 0;
+  }
+}
+
+.nav-links a {
+  font-size: 16px;
+  font-weight: 600;
+  color: #d4d4d8;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.boton-comprar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 187px;
+  height: 49px;
+  background-color: #e0202a;
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  text-decoration: none;
+  border-radius: 999px;
+}
+
+.boton-comprar:hover {
+  background-color: #a50d14;
+  color: white;
+}
+
+/* modal */
+/* Contenedor principal para centrar y separar los botones */
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  background-color: #ffffff; /* Ajusta según el fondo de tu modal */
+}
+
+/* Estilos base compartidos para ambos botones */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 320px; /* Ancho idéntico al de la imagen */
+  height: 48px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Iconos de los botones */
+.icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Estilos específicos: Botón "Intentar de nuevo" (Rojo) */
+.btn-primary {
+  background-color: #ff334b;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #e0243b; /* Efecto hover un toque más oscuro */
+}
+
+/* Estilos específicos: Botón "Volver al carrito" (Blanco con borde) */
+.btn-secondary {
+  background-color: #ffffff;
+  color: #1a253c;
+  border: 1.5px solid #1a253c;
+}
+
+.btn-secondary:hover {
+  background-color: #f4f6f9; /* Efecto hover sutil grisáceo */
+}
+
+.div-img-tc-error img {
+  width: 65%;
 }
