@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: #0b0b0c;
+  color: #ffffff;
+  font-family: "Plus Jakarta Sans", Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(100% - 48px, 1200px);
+  margin-inline: auto;
+}
+
+/* ENCABEZADO */
+
+.navbar {
+  padding: 22px 0;
+  border-bottom: 1px solid #202023;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.navbar img {
+  display: block;
+  width: 140px;
+  height: auto;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar a {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.navbar ul a:hover {
+  color: #ff6370;
+}
+
+.navbar .btn,
+.navbar .boton-entrada {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 26px;
+  border: 0;
+  border-radius: 50px;
+  background: #e51b2b;
+  color: white;
+  font-weight: 800;
+}
+
+/* RECUADRO ROJO */
+
+.error-404 {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 48px;
+  width: min(100% - 48px, 1312px);
+  margin: 48px auto 0;
+  padding: 60px 56px;
+  border-radius: 40px;
+  background: linear-gradient(145deg, #e51b2b, #76060d);
+}
+
+.error-404-etiqueta {
+  margin-bottom: 18px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.error-404-numero {
+  color: #0b0b0c;
+  font-size: clamp(130px, 18vw, 250px);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -12px;
+}
+
+.error-404 h1 {
+  margin: 20px 0;
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.error-404-texto {
+  max-width: 480px;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.error-404-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.error-404-botones a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 58px;
+  padding: 14px 30px;
+  border: 2px solid white;
+  border-radius: 50px;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.error-404-botones a:first-child {
+  border-color: #0b0b0c;
+  background: #0b0b0c;
+}
+
+.error-404-botones a:hover {
+  background: white;
+  border-color: white;
+  color: #0b0b0c;
+}
+
+/* ENLACES DE LA DERECHA */
+
+.error-404-enlaces {
+  padding: 36px;
+  border-radius: 32px;
+  background: #0b0b0c;
+}
+
+.error-404-enlaces h2 {
+  margin-bottom: 20px;
+  color: #e51b2b;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.error-404-enlaces ul {
+  display: grid;
+  gap: 18px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.error-404-enlaces a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 19px 20px;
+  border: 1px solid #2c2c31;
+  border-radius: 19px;
+  background: #111113;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.error-404-enlaces a::after {
+  content: "→";
+  color: #e51b2b;
+}
+
+.error-404-enlaces a:hover {
+  border-color: #e51b2b;
+}
+
+/* PIE DE PÁGINA */
+
+.footer-404 {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  width: min(100% - 48px, 1200px);
+  margin: 46px auto 30px;
+  color: #99999f;
+  font-size: 14px;
+}
+
+a:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 5px;
+}
+
+/* TABLET Y CELULAR */
+
+@media (max-width: 900px) {
+  .error-404 {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 40px 30px;
+  }
+
+  .error-404-numero {
+    font-size: clamp(130px, 30vw, 220px);
+  }
+
+  .navbar .container,
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar ul {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 580px) {
+  .error-404 {
+    width: calc(100% - 32px);
+    margin-top: 24px;
+    padding: 32px 22px;
+    border-radius: 26px;
+  }
+
+  .error-404-numero {
+    font-size: clamp(110px, 34vw, 180px);
+    letter-spacing: -7px;
+  }
+
+  .error-404 h1 {
+    font-size: 34px;
+    letter-spacing: -1px;
+  }
+
+  .error-404-texto {
+    font-size: 16px;
+  }
+
+  .error-404-botones {
+    flex-direction: column;
+  }
+
+  .error-404-enlaces {
+    padding: 24px 18px;
+    border-radius: 24px;
+  }
+
+  .error-404-enlaces a {
+    padding: 16px;
+    font-size: 15px;
+  }
+
+  .footer-404 {
+    flex-direction: column;
+    margin-top: 28px;
+    font-size: 12px;
+  }
+}
