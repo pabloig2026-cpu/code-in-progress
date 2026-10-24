@@ -81,8 +81,8 @@ body {
   line-height: 1.5;
 }
 
-#speakers > .speakers-etiqueta,
-#speakers > h2 {
+#speakers>.speakers-etiqueta,
+#speakers>h2 {
   max-width: 1180px;
   margin-left: auto;
   margin-right: auto;
@@ -115,11 +115,8 @@ body {
     grid-template-columns: 1fr;
     gap: 10px;
   }
-
-  .speaker-card:hover {
-    transform: scale(1);
-  }
 }
+
 /* fin de los css de leiza */
 
 /* comienzo de los css de pablo */
@@ -131,7 +128,8 @@ body {
 .agenda-section {
   background-color: #0b0b0b;
   color: #ffffff;
-  padding: 80px 20px; /* Se añade padding lateral como salvaguarda en pantallas medianas */
+  padding: 80px 20px;
+  /* Se añade padding lateral como salvaguarda en pantallas medianas */
 }
 
 /* NUEVA REGLA: Centra el contenido general y le da un ancho máximo alineado con la grilla superior */
@@ -149,7 +147,8 @@ body {
 }
 
 .agenda-info {
-  padding-right: 40px; /* Espaciado interno derecho para separarlo de la lista */
+  padding-right: 40px;
+  /* Espaciado interno derecho para separarlo de la lista */
 }
 
 .agenda-etiqueta {
@@ -196,7 +195,8 @@ body {
   color: #e0202a;
   font-size: 24px;
   font-weight: 800;
-  min-width: 110px; /* Ajustado ligeramente para dar aire al número */
+  min-width: 110px;
+  /* Ajustado ligeramente para dar aire al número */
   font-variant-numeric: tabular-nums;
 }
 
@@ -229,6 +229,7 @@ body {
 }
 
 @media (max-width: 991px) {
+
   .col-lg-4,
   .col-lg-8 {
     flex: 0 0 100%;
@@ -312,6 +313,7 @@ body {
     gap: 24px;
   }
 }
+
 /* pablo */
 /* =========================
    CONFIGURACIÓN GENERAL
@@ -726,7 +728,7 @@ input:focus-visible {
   accent-color: var(--red);
 }
 
-.ticket-option > span {
+.ticket-option>span {
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -734,8 +736,8 @@ input:focus-visible {
   min-width: 0;
 }
 
-.ticket-option > span strong,
-.ticket-option > strong {
+.ticket-option>span strong,
+.ticket-option>strong {
   font-size: 12px;
 }
 
@@ -751,7 +753,7 @@ input:focus-visible {
   margin: 22px 0;
 }
 
-.quantity-section > label {
+.quantity-section>label {
   font-size: 12px;
   font-weight: 700;
 }
@@ -1079,6 +1081,7 @@ input:focus-visible {
   font-size: 10px;
   font-weight: 800;
 }
+
 /* 
 logo de la rooling en el footer 
  */
@@ -1088,6 +1091,7 @@ logo de la rooling en el footer
   display: block;
   object-fit: contain;
 }
+
 .brand-name {
   font-size: 10px;
   font-weight: 800;
@@ -1239,8 +1243,8 @@ logo de la rooling en el footer
     padding: 11px 8px;
   }
 
-  .ticket-option > span strong,
-  .ticket-option > strong {
+  .ticket-option>span strong,
+  .ticket-option>strong {
     font-size: 11px;
   }
 
@@ -1319,13 +1323,16 @@ logo de la rooling en el footer
   border: 0;
   filter: invert(90%) hue-rotate(180deg) brightness(85%) contrast(90%);
 }
+
 /* Contenedor principal del mapa con bordes muy redondeados como el mockup */
 .map-container {
   position: relative;
-  width: 600px; /* Puedes cambiarlo a 100% si es responsive */
+  width: 600px;
+  /* Puedes cambiarlo a 100% si es responsive */
   height: 450px;
   border-radius: 24px;
-  overflow: hidden; /* Obliga al iframe a respetar las esquinas redondeadas */
+  overflow: hidden;
+  /* Obliga al iframe a respetar las esquinas redondeadas */
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   font-family:
     system-ui,
@@ -1350,15 +1357,18 @@ logo de la rooling en el footer
   bottom: 16px;
   left: 16px;
   right: 16px;
-  background-color: #0b0b0b; /* Negro mate del mockup */
-  border: 1px solid #1f1f1f; /* Borde sutil */
+  background-color: #0b0b0b;
+  /* Negro mate del mockup */
+  border: 1px solid #1f1f1f;
+  /* Borde sutil */
   border-radius: 16px;
   padding: 16px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #ffffff;
-  pointer-events: auto; /* Permite hacer clic en la tarjeta si lo deseas */
+  pointer-events: auto;
+  /* Permite hacer clic en la tarjeta si lo deseas */
 }
 
 /* Textos del lado izquierdo */
@@ -1372,12 +1382,73 @@ logo de la rooling en el footer
 .card-left p {
   margin: 0;
   font-size: 13px;
-  color: #8a8a8a; /* Gris apagado del mockup */
+  color: #8a8a8a;
+  /* Gris apagado del mockup */
 }
 
 /* Coordenadas del lado derecho */
 .card-right span {
   font-size: 13px;
   color: #707070;
-  font-variant-numeric: tabular-nums; /* Alineación perfecta de números */
+  font-variant-numeric: tabular-nums;
+  /* Alineación perfecta de números */
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+p {
+  font-weight: 400;
+}
+
+/* ver que lo pongan en el navbar*/
+.nav-link {
+  font-weight: 600;
+}
+
+.titulo-h1 {
+  font-weight: 800;
+  font-size: 88px;
+  line-height: 1.02;
+  letter-spacing: -1.5px;
+}
+
+@media(max-width:768px) {
+  .titulo-h1 {
+    font-size: 40px;
+  }
+}
+
+.workshop {
+  font-weight: 300;
+  font-style: italic;
+}
+
+.parrafo {
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+.palabras-titulos {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.numero-grande {
+  font-size: 80px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+@media(max-width:767px) {
+  .numero-grande {
+    font-size: 48px;
+  }
+}
+
+.texto-chico {
+  font-size: 14px;
 }
