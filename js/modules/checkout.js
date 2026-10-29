@@ -1,5 +1,4 @@
-/* Compra: tipo de entrada, cantidad, medio de pago, resumen con total dinámico y envío simulado.
-   La pasarela es de ejemplo: todo pago termina en el modal de error (sin Bootstrap, en error-pago.html). */
+
 (function (root) {
   'use strict';
   const RC = (root.RC = root.RC || {});
@@ -92,7 +91,6 @@
       showPaymentError(updateSummary());
     });
 
-    // Botones "Comprar entrada" de los planes: eligen el plan y el ancla baja a la compra.
     document.querySelectorAll('[data-select-plan]').forEach((link) =>
       link.addEventListener('click', (event) => {
         if (link.getAttribute('aria-disabled') === 'true') {

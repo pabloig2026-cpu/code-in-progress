@@ -1,5 +1,4 @@
-/* "Sumate como Sponsor": validación (reutiliza form-validation), subida de logo con arrastrar y soltar y
-   confirmación. Es solo diseño: no se envía ni se guarda nada. Lo que escribe el usuario se muestra con textContent. */
+
 (function (root) {
   'use strict';
   const RC = (root.RC = root.RC || {});
@@ -8,7 +7,6 @@
     return bytes < 1024 * 1024 ? `${Math.max(1, Math.round(bytes / 1024))} KB` : `${(bytes / 1024 / 1024).toFixed(1)} MB`;
   }
 
-  /** Zona de logo. Devuelve { validate, reset } para que el formulario la consulte. */
   function initLogo(form) {
     const field = form.querySelector('[data-logo-field]');
     const zone = field.querySelector('[data-dropzone]');
