@@ -1,4 +1,4 @@
-/* Validadores y formateadores del formulario de compra. Funciones puras: devuelven '' si el valor es válido o el mensaje de error. */
+
 (function (root) {
   'use strict';
   const RC = (root.RC = root.RC || {});
@@ -54,7 +54,7 @@
     required(value) {
       return value ? '' : 'Elegí una opción.';
     },
-    /** Recibe un File (o {name, size}). Sin archivo es válido: el logo es opcional. */
+    
     logoFile(file) {
       if (!file) return '';
       const ext = file.name.split('.').pop().toLowerCase();
@@ -64,11 +64,11 @@
   };
 
   const formatters = {
-    /** "4000000000000002" -> "4000 0000 0000 0002" */
+  
     cardNumber(value) {
       return onlyDigits(value).slice(0, 16).replace(/(\d{4})(?=\d)/g, '$1 ');
     },
-    /** "1227" -> "12/27" */
+
     cardExpiry(value) {
       const digits = onlyDigits(value).slice(0, 4);
       return digits.length > 2 ? `${digits.slice(0, 2)}/${digits.slice(2)}` : digits;

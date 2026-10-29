@@ -1,5 +1,4 @@
-/* Modal de speaker. Los datos se leen de la tarjeta en el DOM (data-speaker-*), así no se duplican en JS.
-   Lo abren las tarjetas de speakers y las filas de la agenda (data-open-speaker="id"). */
+
 (function (root) {
   'use strict';
   const RC = (root.RC = root.RC || {});
@@ -86,7 +85,6 @@
       })
     );
 
-    // Se actúa recién cuando el modal terminó de cerrarse: Bootstrap bloquea el scroll del body mientras está abierto.
     modalEl.addEventListener('hidden.bs.modal', () => {
       const action = afterClose;
       afterClose = null;

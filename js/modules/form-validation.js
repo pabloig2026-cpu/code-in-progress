@@ -1,5 +1,4 @@
-/* Conecta los validadores puros con el DOM: [data-validate="clave"] valida al salir del campo y al enviar,
-   [data-format="clave"] formatea mientras se escribe. El error se muestra en #<id>-error. */
+
 (function (root) {
   'use strict';
   const RC = (root.RC = root.RC || {});
@@ -18,13 +17,10 @@
     return !message;
   }
 
-  /** Campos activos: los de un fieldset deshabilitado (medio de pago no elegido) no se validan. */
   function activeFields(form) {
-    // :disabled y no .disabled: la propiedad no refleja el disabled heredado del fieldset.
     return [...form.querySelectorAll('[data-validate]')].filter((input) => !input.matches(':disabled'));
   }
 
-  /** Valida todo, enfoca el primer error y devuelve true si el formulario es válido. */
   function validateForm(form) {
     const invalid = activeFields(form).filter((input) => !validateField(input));
     if (invalid.length) invalid[0].focus();
