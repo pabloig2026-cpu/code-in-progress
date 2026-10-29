@@ -1,5 +1,4 @@
-/* Contador Early Bird. Cuenta hacia data-deadline (hora local). Al llegar a cero emite "rc:earlybird-ended"
-   para que checkout y planes reaccionen sin acoplarse a este módulo. */
+
 (function (root) {
   'use strict';
   const RC = (root.RC = root.RC || {});

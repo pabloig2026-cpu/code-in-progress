@@ -1,4 +1,4 @@
-/* Header: hamburguesa spin sincronizada con el offcanvas de Bootstrap, sombra al hacer scroll y link activo según la sección visible. */
+
 (function (root) {
   'use strict';
   const RC = (root.RC = root.RC || {});
@@ -16,8 +16,6 @@
     let pendingTarget = null;
     menu.addEventListener('show.bs.offcanvas', () => setOpen(true));
     menu.addEventListener('hide.bs.offcanvas', () => setOpen(false));
-    // Bootstrap bloquea el scroll mientras el panel está abierto: se navega recién cuando terminó de cerrarse.
-    // El setTimeout deja que Bootstrap devuelva el foco al botón primero; ese focus() cortaba el scroll suave.
     menu.addEventListener('hidden.bs.offcanvas', () => {
       const target = pendingTarget;
       pendingTarget = null;
@@ -59,7 +57,7 @@
           });
         });
       },
-      { rootMargin: '-45% 0px -50% 0px' } // "visible" = cruza la franja media de la pantalla
+      { rootMargin: '-45% 0px -50% 0px' }
     );
     sections.forEach((section) => observer.observe(section));
   }

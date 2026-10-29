@@ -1,35 +1,24 @@
-/* ==========================================================================
-   Workshop "¿Por dónde empiezo a programar?" · Rolling Code School
-   Mobile first. Bootstrap 5.3 solo para grilla, utilidades, collapse y modal.
-   ========================================================================== */
 
-/* ---------- Tokens ---------- */
 :root {
-  /* Marca */
   --red: #e0202a;
   --red-2: #a50d14;
   --red-3: #6e070c;
   --red-hover: #ff2d3a;
-  /* #e0202a sobre #0b0b0c da 4.1:1; para texto rojo chico se usa el token más claro (5.3:1). */
   --red-text: var(--red-hover);
 
-  /* Fondos */
   --bg: #0b0b0c;
   --surface: #111113;
   --surface-2: #26262a;
   --surface-3: #161618;
 
-  /* Bordes */
   --line: #2c2c31;
   --line-2: #3a3a40;
 
-  /* Texto */
   --text: #d4d4d8;
   --muted: #a1a1aa;
   --white: #ffffff;
   --on-red: #ffe9ea;
 
-  /* Superficies claras (formulario de compra) */
   --paper: #ffffff;
   --paper-line: #d4d4d8;
   --paper-bg: #f4f4f5;
@@ -112,7 +101,6 @@ a {
   padding-top: 64px;
 }
 
-/* ---------- Tipografía compartida ---------- */
 .eyebrow {
   margin-bottom: 12px;
   color: var(--red-text);
@@ -135,13 +123,11 @@ a {
 .section-head {
   margin-bottom: 40px;
 }
-
 .section-text {
   font-size: 18px;
   line-height: 1.6;
 }
 
-/* ---------- Botones ---------- */
 .btn-rc {
   display: inline-flex;
   align-items: center;
@@ -238,13 +224,11 @@ a {
   gap: 12px;
 }
 
-/* Íconos rojos de assets/iconos pasados a blanco sobre fondos rojos u oscuros */
 .icon-on-red,
 .icon-on-dark {
   filter: brightness(0) invert(1);
 }
 
-/* ---------- Chips ---------- */
 .chips {
   display: flex;
   flex-wrap: wrap;
@@ -280,9 +264,6 @@ a {
   font-weight: 800;
 }
 
-/* ==========================================================================
-   HEADER (RC-01)
-   ========================================================================== */
 .site-header {
   position: sticky;
   top: 0;
@@ -323,7 +304,6 @@ a {
   margin-left: auto;
 }
 
-/* Hamburguesa "spin" (Hamburgers de Jonathan Suh, MIT · https://jonsuh.com/hamburgers/) */
 .hamburger {
   padding: 10px;
   display: inline-flex;
@@ -421,12 +401,9 @@ a {
   color: var(--white);
 }
 
-/* Panel móvil: offcanvas de derecha a izquierda, translúcido */
 @media (max-width: 991.98px) {
-  /* El header queda sobre el fondo oscuro de Bootstrap (1040) y el botón sobre el panel (1045): se ve girar hasta la X */
   .site-header {
     z-index: 1050;
-    /* Un backdrop-filter en el header encierra al panel (position: fixed) y lo recorta: en móvil no se usa */
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
     background: rgba(11, 11, 12, 0.96);
@@ -450,7 +427,7 @@ a {
   .rc-offcanvas .offcanvas-body {
     display: flex;
     flex-direction: column;
-    padding: 96px 24px 32px; /* deja libre el lugar del botón */
+    padding: 96px 24px 32px; 
   }
 
   .nav-rc .nav-link {
@@ -506,9 +483,6 @@ a {
   }
 }
 
-/* ==========================================================================
-   HERO (RC-02)
-   ========================================================================== */
 .section-hero {
   padding-top: 16px;
 }
@@ -618,9 +592,6 @@ a {
   animation-delay: 0.3s;
 }
 
-/* ==========================================================================
-   DATOS CLAVE (RC-03)
-   ========================================================================== */
 .stats {
   border: 1px solid var(--line);
   border-radius: 28px;
@@ -657,9 +628,6 @@ a {
   font-size: 15px;
 }
 
-/* ==========================================================================
-   SPEAKERS (RC-05)
-   ========================================================================== */
 .speakers-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -724,7 +692,6 @@ a {
   line-height: 1.2;
 }
 
-/* Botón con área extendida a toda la tarjeta (el nombre es el texto accesible) */
 .speaker-trigger {
   padding: 0;
   border: 0;
@@ -791,9 +758,6 @@ a {
   transform: translate(-50%, 0);
 }
 
-/* ==========================================================================
-   AGENDA (RC-06)
-   ========================================================================== */
 .agenda-list {
   margin: 0;
   padding: 0;
@@ -859,9 +823,6 @@ a {
   animation: rc-flash 1.8s ease-out;
 }
 
-/* ==========================================================================
-   ENTRADAS: EARLY BIRD, CONTADOR Y PLANES (RC-07, RC-08, RC-09)
-   ========================================================================== */
 .earlybird {
   display: grid;
   gap: 24px;
@@ -1023,7 +984,6 @@ a {
   font-size: 16px;
 }
 
-/* 56px cuando entra; si la tarjeta es angosta se achica para que el tachado quede a la derecha, en la misma línea */
 .plan-amount {
   font-size: min(56px, 15cqi);
   white-space: nowrap;
@@ -1074,7 +1034,6 @@ a {
   color: var(--on-red);
 }
 
-/* Píldora negra sin borde ("Quedan 38") */
 .chip--dark {
   border-color: var(--paper-text);
   background: var(--paper-text);
@@ -1092,9 +1051,6 @@ a {
   box-shadow: none;
 }
 
-/* ==========================================================================
-   COMPRA (RC-09)
-   ========================================================================== */
 .checkout {
   padding: 28px 16px;
   border-radius: 28px;
@@ -1408,7 +1364,6 @@ a {
   font-weight: 800;
 }
 
-/* Resumen del pedido */
 .order-summary {
   padding: 28px 22px;
   border-radius: 28px;
@@ -1486,9 +1441,6 @@ a {
   animation: rc-bump 0.4s var(--ease);
 }
 
-/* ==========================================================================
-   UBICACIÓN (RC-10)
-   ========================================================================== */
 .location-address {
   margin: 8px 0 20px;
   color: var(--text);
@@ -1545,9 +1497,6 @@ a {
   font-size: 14px;
 }
 
-/* ==========================================================================
-   FOOTER (RC-11)
-   ========================================================================== */
 .site-footer {
   margin-top: 64px;
   padding: 32px 0;
@@ -1607,9 +1556,6 @@ a {
   transform: translateY(-3px);
 }
 
-/* ==========================================================================
-   SPEAKERS: CARRUSEL EN MÓVIL
-   ========================================================================== */
 .carousel-controls {
   display: none;
   align-items: center;
@@ -1667,12 +1613,11 @@ a {
 
 @media (max-width: 767.98px) {
   .speakers-grid {
-    position: relative; /* offsetLeft de los ítems se mide contra el track */
+    position: relative; 
     display: flex;
     gap: 14px;
     margin-inline: -16px;
-    /* El relleno lateral permite que la primera y la última tarjeta también queden centradas */
-    padding: 8px calc((100% + 32px - min(74vw, 300px)) / 2) 12px; /* 100% + 32px = ancho real del track */
+    padding: 8px calc((100% + 32px - min(74vw, 300px)) / 2) 12px; 
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     overscroll-behavior-x: contain;
@@ -1688,7 +1633,6 @@ a {
     scroll-snap-align: center;
   }
 
-  /* Dentro del carrusel no hay entrada al hacer scroll ni desplazamiento por hover */
   html.js .speakers-grid > .reveal {
     opacity: 1;
     transform: none;
@@ -1704,9 +1648,6 @@ a {
   }
 }
 
-/* ==========================================================================
-   SPONSORS (RC-14)
-   ========================================================================== */
 .section-note {
   margin-top: 4px;
   color: var(--muted);
@@ -2028,9 +1969,6 @@ a {
   font-size: 13px;
 }
 
-/* ==========================================================================
-   SUMATE COMO SPONSOR (RC-15)
-   ========================================================================== */
 .sumate-head {
   max-width: 860px;
   margin: 0 auto 40px;
@@ -2065,7 +2003,6 @@ a {
   isolation: isolate;
 }
 
-/* Resplandor rojo arriba a la derecha */
 .sponsor-form-card::before {
   content: '';
   position: absolute;
@@ -2344,9 +2281,6 @@ a {
   overflow-wrap: anywhere;
 }
 
-/* ==========================================================================
-   MODAL DE SPEAKER
-   ========================================================================== */
 .modal-backdrop.show {
   opacity: 0.75;
 }
@@ -2425,9 +2359,7 @@ a {
   line-height: 1.6;
 }
 
-/* ==========================================================================
-   404 (RC-12)
-   ========================================================================== */
+
 .page-center {
   position: relative;
   display: flex;
@@ -2547,9 +2479,6 @@ a {
   margin-top: 40px;
 }
 
-/* ==========================================================================
-   ERROR DE PAGO (RC-13)
-   ========================================================================== */
 .error-card {
   width: 100%;
   max-width: 640px;
@@ -2619,16 +2548,12 @@ a {
   font-size: 32px;
 }
 
-/* Misma tarjeta de error dentro del modal de Bootstrap: la animación de entrada la pone el modal. */
 .error-modal {
   position: relative;
   color: var(--text);
   animation: none;
 }
 
-/* ==========================================================================
-   ANIMACIONES
-   ========================================================================== */
 html.js .reveal {
   opacity: 0;
   transform: translateY(32px);
@@ -2734,9 +2659,6 @@ html.js .reveal.is-visible {
   }
 }
 
-/* ==========================================================================
-   RESPONSIVE
-   ========================================================================== */
 @media (min-width: 576px) {
   .speakers-grid {
     gap: 20px;
@@ -2891,7 +2813,6 @@ html.js .reveal.is-visible {
     font-size: 16px;
   }
 
-  /* Subrayado rojo animado */
   .nav-rc .nav-link::after {
     content: '';
     position: absolute;
@@ -2961,7 +2882,6 @@ html.js .reveal.is-visible {
   }
 }
 
-/* Sponsors y formulario de sponsor */
 @media (min-width: 768px) {
   .tier {
     margin-bottom: 72px;
@@ -3040,9 +2960,6 @@ html.js .reveal.is-visible {
   }
 }
 
-/* ==========================================================================
-   MOVIMIENTO REDUCIDO
-   ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

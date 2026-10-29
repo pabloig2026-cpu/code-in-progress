@@ -1,5 +1,4 @@
-/* Página de error de pago: arma el resumen a partir de la URL. El total se recalcula con los precios propios
-   (no se confía en la URL) y todo se escribe con textContent. */
+
 (function (root) {
   'use strict';
   const RC = (root.RC = root.RC || {});

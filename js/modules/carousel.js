@@ -1,5 +1,4 @@
-/* Carrusel con scroll-snap (sin librerías). En pantallas donde la lista no desborda (grilla de escritorio)
-   los controles quedan ocultos por CSS y este módulo no molesta. */
+
 (function (root) {
   'use strict';
   const RC = (root.RC = root.RC || {});

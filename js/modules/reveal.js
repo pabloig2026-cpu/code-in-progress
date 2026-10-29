@@ -1,4 +1,4 @@
-/* Entrada al hacer scroll: fade + subida (.reveal), contadores de datos clave ([data-count]) y barra de progreso ([data-progress]). */
+
 (function (root) {
   'use strict';
   const RC = (root.RC = root.RC || {});
