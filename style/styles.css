@@ -1,4 +1,3 @@
-
 :root {
   --red: #e0202a;
   --red-2: #a50d14;
@@ -26,7 +25,12 @@
   --paper-muted: #52525b;
   --error: #b3141c;
 
-  --gradient-brand: linear-gradient(160deg, #e0202a 0%, #a50d14 55%, #6e070c 100%);
+  --gradient-brand: linear-gradient(
+    160deg,
+    #e0202a 0%,
+    #a50d14 55%,
+    #6e070c 100%
+  );
   --ease: cubic-bezier(0.22, 0.8, 0.3, 1);
   --shadow-card: 0 22px 50px rgba(224, 32, 42, 0.28);
   --shadow-btn: 0 12px 30px rgba(224, 32, 42, 0.45);
@@ -44,7 +48,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -212,7 +216,7 @@ a {
   color: var(--paper-text);
 }
 
-.btn-rc[aria-disabled='true'],
+.btn-rc[aria-disabled="true"],
 .btn-rc:disabled {
   opacity: 0.55;
   pointer-events: none;
@@ -343,7 +347,7 @@ a {
 }
 .hamburger-inner::before,
 .hamburger-inner::after {
-  content: '';
+  content: "";
   display: block;
 }
 .hamburger-inner::before {
@@ -427,7 +431,7 @@ a {
   .rc-offcanvas .offcanvas-body {
     display: flex;
     flex-direction: column;
-    padding: 96px 24px 32px; 
+    padding: 96px 24px 32px;
   }
 
   .nav-rc .nav-link {
@@ -703,7 +707,7 @@ a {
 }
 
 .speaker-trigger::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: 28px;
@@ -1467,7 +1471,8 @@ a {
   width: 100%;
   height: 100%;
   border: 0;
-  filter: invert(0.92) hue-rotate(180deg) grayscale(0.4) contrast(0.9) brightness(0.9);
+  filter: invert(0.92) hue-rotate(180deg) grayscale(0.4) contrast(0.9)
+    brightness(0.9);
 }
 
 .map-card {
@@ -1613,11 +1618,11 @@ a {
 
 @media (max-width: 767.98px) {
   .speakers-grid {
-    position: relative; 
+    position: relative;
     display: flex;
     gap: 14px;
     margin-inline: -16px;
-    padding: 8px calc((100% + 32px - min(74vw, 300px)) / 2) 12px; 
+    padding: 8px calc((100% + 32px - min(74vw, 300px)) / 2) 12px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     overscroll-behavior-x: contain;
@@ -1763,6 +1768,13 @@ a {
   font-weight: 800;
   letter-spacing: -0.5px;
 }
+/* 
+
+
+
+original
+
+
 
 .sponsor-logo--xl {
   width: 120px;
@@ -1776,6 +1788,114 @@ a {
   height: 50px;
   border-radius: 14px;
   font-size: 18px;
+}
+
+
+
+ */
+
+/* 1. Tus clases de tamaño actuales (se mantienen igual) */
+.sponsor-logo--xl {
+  width: 120px;
+  height: 120px;
+  border-radius: 26px;
+}
+
+.sponsor-logo--sm {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+}
+/* Esto aplica para ambos tamaños sin importar si es grande o chico */
+.sponsor-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Encajará la imagen entera en los 50px de la versión pequeña */
+  display: block;
+}
+
+/* Y este padding más pequeño evita que el logo se vea minúsculo dentro de los 50px */
+.sponsor-logo--sm img {
+  padding: 6px;
+}
+/* 
+
+
+/* 2. Configuración del contenedor SPAN */
+.sponsor-logo {
+  display: inline-flex; /* Permite que el span respete el ancho/alto y centre el contenido */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Corta la imagen si se sale de las esquinas redondeadas */
+  background-color: #fff; /* Opcional: fondo blanco por si el logo es transparente */
+}
+
+/* 3. TRUCO MAESTRO: Hace que la imagen se adapte automáticamente */
+.sponsor-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Escalará el logo para que quepa entero sin deformarse ni recortarse */
+}
+
+/* Tus clases actuales modificadas ligeramente */
+.sponsor-logo--xl {
+  width: 120px;
+  height: 120px;
+  border-radius: 26px;
+  overflow: hidden; /* Corta la imagen si se sale de las esquinas redondeadas */
+  display: flex; /* Centra la imagen por si acaso */
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsor-logo--sm {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* NUEVA REGLA: Obliga a la imagen a llenar el contenedor perfectamente */
+.sponsor-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Mantiene la proporción del logo sin recortarlo */
+}
+
+.sponsor-logo--xl {
+  width: 120px;
+  height: 120px;
+  border-radius: 26px;
+  font-size: 40px;
+  display: inline-flex; /* Asegura que el contenedor maneje bien las dimensiones */
+  align-items: center; /* Centra la imagen verticalmente */
+  justify-content: center; /* Centra la imagen horizontalmente */
+  overflow: hidden; /* OBLIGATORIO: Corta la imagen con la forma del borde redondeado */
+  background-color: #161719; /* Opcional: El color gris oscuro de AWS para unificar fondos */
+}
+
+.sponsor-logo--sm {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* También protege el tamaño pequeño */
+}
+
+/* 🚀 ESTA REGLA ES LA QUE SE ADAPTA A TU CSS 🚀 */
+/* Aplica para las imágenes dentro de logos XL y SM de forma automática */
+.sponsor-logo--xl img,
+.sponsor-logo--sm img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Mantiene el formato y la proporción del logo sin deformarlo */
+  display: block;
 }
 
 /* Nivel 1: tarjeta grande con borde degradé (padding-box + border-box) */
@@ -2004,7 +2124,7 @@ a {
 }
 
 .sponsor-form-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -120px;
   right: -120px;
@@ -2359,7 +2479,6 @@ a {
   line-height: 1.6;
 }
 
-
 .page-center {
   position: relative;
   display: flex;
@@ -2383,11 +2502,15 @@ a {
 }
 
 .glow::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: radial-gradient(circle at 50% 45%, rgba(224, 32, 42, 0.35), transparent 55%);
+  background: radial-gradient(
+    circle at 50% 45%,
+    rgba(224, 32, 42, 0.35),
+    transparent 55%
+  );
   pointer-events: none;
 }
 
@@ -2814,7 +2937,7 @@ html.js .reveal.is-visible {
   }
 
   .nav-rc .nav-link::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     right: 0;
