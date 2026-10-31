@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,8 +10,17 @@
       name="description"
       content="Workshop de Rolling Code School: diez charlas cortas para ordenar tus primeros pasos en programación. Jueves 19/11, 18.00 hs."
     />
+    <meta name="theme-color" content="#0b0b0c" />
     <script>
       document.documentElement.classList.add("js");
+      try {
+        const savedTheme = localStorage.getItem("rc-theme");
+        if (savedTheme === "light" || savedTheme === "dark") {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch (error) {
+        console.warn("No se pudo recuperar el tema guardado.", error);
+      }
     </script>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='white' stroke-width='5'%3E%3Ccircle cx='32' cy='32' r='28'/%3E%3Cpath d='M27 22 15 32 27 42M37 22 49 32 37 42'/%3E%3C/g%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,7 +36,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./style/styles.css" />
-    <link rel="stylesheet" href="./style/404.css" />
   </head>
   <body>
     <script src="../code-in-progress/js/main.js"></script>
@@ -78,6 +86,27 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#ubicacion">Cómo llegar</a>
+              </li>
+              <li class="nav-item theme-switch-item">
+                <button
+                  class="theme-switch"
+                  type="button"
+                  role="switch"
+                  aria-checked="false"
+                  aria-label="Cambiar a modo claro"
+                  data-theme-toggle
+                >
+                  <span class="theme-switch-track" aria-hidden="true">
+                    <svg class="theme-switch-icon theme-switch-icon--moon" viewBox="0 0 16 16" focusable="false">
+                      <path d="M13.2 10.8A6 6 0 0 1 5.2 2.8a6.1 6.1 0 1 0 8 8Z" />
+                    </svg>
+                    <svg class="theme-switch-icon theme-switch-icon--sun" viewBox="0 0 16 16" focusable="false">
+                      <circle cx="8" cy="8" r="3" />
+                      <path d="M8 1v1.5M8 13.5V15M1 8h1.5M13.5 8H15M3.05 3.05l1.06 1.06m7.78 7.78 1.06 1.06m0-9.9-1.06 1.06m-7.78 7.78-1.06 1.06" />
+                    </svg>
+                    <span class="theme-switch-thumb"></span>
+                  </span>
+                </button>
               </li>
               <li class="nav-item nav-item--cta">
                 <a class="btn-rc btn-rc--red" href="#entradas"
@@ -1807,7 +1836,7 @@
             <div class="btn-group-rc">
               <a
                 class="btn-rc btn-rc--ghost"
-                href="https://www.openstreetmap.org/search?query=Gral.%20Paz%20576%2C%20San%20Miguel%20de%20Tucum%C3%A1n"
+                href="https://www.openstreetmap.org/search?query=Calle%20Gral.%20Paz%20576%2C%20San%20Miguel%20de%20Tucum%C3%A1n"
                 target="_blank"
                 rel="noopener"
                 >Abrir en el mapa<span class="visually-hidden">
@@ -1821,8 +1850,8 @@
             <div class="map">
               <iframe
                 class="map-frame"
-                title="Mapa: Rolling Code School, Gral. Paz 576, San Miguel de Tucumán"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=-65.2127%2C-26.8366%2C-65.2027%2C-26.8306&amp;layer=mapnik&amp;marker=-26.8336%2C-65.2077"
+                title="Mapa: Rolling Code School, Calle Gral. Paz 576, San Miguel de Tucumán"
+                src="https://maps.google.com/maps?q=Calle%20Gral.%20Paz%20576%2C%204000%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n%2C%20Argentina&amp;output=embed"
                 loading="lazy"
                 referrerpolicy="no-referrer"
               ></iframe>
@@ -1836,7 +1865,7 @@
                 <div>
                   <p class="map-card-title">Rolling Code School</p>
                   <p class="map-card-sub">
-                    Gral. Paz 576 · San Miguel de Tucumán
+                    Calle Gral. Paz 576 · San Miguel de Tucumán
                   </p>
                 </div>
               </div>

@@ -2,6 +2,70 @@
 (function (root) {
   'use strict';
   const RC = (root.RC = root.RC || {});
+  const THEMES = Object.freeze({ DARK: 'dark', LIGHT: 'light' });
+  const THEME_ASSETS = Object.freeze({
+    [THEMES.DARK]: Object.freeze({
+      color: '#0b0b0c',
+      logo: 'assets/logo/logo-rolling-blanco.png',
+    }),
+    [THEMES.LIGHT]: Object.freeze({
+      color: '#f4f4f5',
+      logo: 'assets/logo/logo-rolling-negro.png',
+    }),
+  });
+
+  function getNextTheme(theme) {
+    return theme === THEMES.LIGHT ? THEMES.DARK : THEMES.LIGHT;
+  }
+
+  function initTheme(header) {
+    const toggle = header.querySelector('[data-theme-toggle]');
+    if (!toggle) return;
+
+    const rootElement = document.documentElement;
+    const themeColor = document.querySelector('meta[name="theme-color"]');
+    const logos = document.querySelectorAll('.brand img, .footer-brand img');
+    const savedTheme = THEME_ASSETS[rootElement.dataset.theme]
+      ? rootElement.dataset.theme
+      : THEMES.DARK;
+    let transitionTimer = null;
+
+    function applyTheme(theme, persist = false) {
+      const isLight = theme === THEMES.LIGHT;
+      const assets = THEME_ASSETS[theme];
+      rootElement.dataset.theme = theme;
+      rootElement.style.colorScheme = theme;
+      toggle.setAttribute('aria-checked', String(isLight));
+      toggle.setAttribute('aria-label', `Cambiar a modo ${isLight ? 'oscuro' : 'claro'}`);
+      if (themeColor) themeColor.content = assets.color;
+      logos.forEach((logo) => {
+        logo.src = assets.logo;
+      });
+
+      if (persist) {
+        try {
+          root.localStorage.setItem('rc-theme', theme);
+        } catch (error) {
+          console.warn('No se pudo guardar el tema seleccionado.', error);
+        }
+      }
+    }
+
+    applyTheme(savedTheme);
+    toggle.addEventListener('click', () => {
+      const nextTheme = getNextTheme(rootElement.dataset.theme);
+      const reduceMotion = root.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!reduceMotion) {
+        root.clearTimeout(transitionTimer);
+        document.body.classList.add('theme-transitioning');
+        transitionTimer = root.setTimeout(
+          () => document.body.classList.remove('theme-transitioning'),
+          350
+        );
+      }
+      applyTheme(nextTheme, true);
+    });
+  }
 
   function initHamburger(header) {
     const menu = header.querySelector('#menu');
@@ -65,6 +129,7 @@
   function init() {
     const header = document.querySelector('.site-header');
     if (!header) return;
+    initTheme(header);
     initHamburger(header);
     initScrollShadow(header);
     initActiveLink(header);
