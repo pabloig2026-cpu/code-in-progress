@@ -10,6 +10,7 @@
     RC.countdown,
     RC.sponsorForm,
     RC.paymentError,
+    RC.aiChat,
   ];
 
   function start() {
