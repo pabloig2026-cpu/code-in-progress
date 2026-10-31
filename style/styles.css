@@ -667,6 +667,10 @@ a {
   transition: transform 0.6s var(--ease);
 }
 
+.speaker-card[data-speaker-id="4"] .speaker-photo img {
+  object-position: center top;
+}
+
 .speaker-badge {
   position: absolute;
   left: 50%;
