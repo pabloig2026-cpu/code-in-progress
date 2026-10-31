@@ -1,4 +1,4 @@
-/* Precios y cálculo del pedido. Única fuente de verdad para checkout y página de error de pago. */
+
 (function (root) {
   'use strict';
   const RC = (root.RC = root.RC || {});
@@ -19,7 +19,6 @@
     return Math.min(MAX_QTY, Math.max(MIN_QTY, n));
   }
 
-  /** Devuelve null si el plan no existe (por ejemplo, un valor manipulado en la URL). */
   function calculateOrder(planKey, qty) {
     const plan = Object.prototype.hasOwnProperty.call(PLANS, planKey) ? PLANS[planKey] : null;
     if (!plan) return null;

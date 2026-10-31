@@ -18,26 +18,22 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="../style/styles.css" />
   </head>
   <body>
-    <!-- ERROR DE PAGO (RC-13) -->
     <main class="page-center glow">
-      <a class="page-logo" href="index.html">
-        <img src="assets/logo/logo-rolling-blanco.png" alt="Rolling Code School · volver al inicio" width="133" height="44" />
+      <a class="page-logo" href="../index.html">
+        <img src="../assets/logo/logo-rolling-blanco.png" alt="Rolling Code School · volver al inicio" width="133" height="44" />
       </a>
-
       <section class="error-card" aria-labelledby="payment-error-title">
         <div class="error-icon" aria-hidden="true">!</div>
         <h1 class="error-title" id="payment-error-title">No pudimos procesar tu pago</h1>
         <p class="section-text">No se hizo ningún cobro. Podés volver a intentarlo:</p>
-
         <ul class="error-tips">
-          <li><img src="assets/iconos/check-rojo.svg" alt="" width="20" height="20" />Revisá que los datos de la tarjeta estén bien escritos.</li>
-          <li><img src="assets/iconos/check-rojo.svg" alt="" width="20" height="20" />Confirmá que la tarjeta tenga saldo o límite disponible.</li>
-          <li><img src="assets/iconos/check-rojo.svg" alt="" width="20" height="20" />Probá con otro medio de pago: transferencia o billetera virtual.</li>
+          <li><img src="../assets/iconos/check-rojo.svg" alt="" width="20" height="20" />Revisá que los datos de la tarjeta estén bien escritos.</li>
+          <li><img src="../assets/iconos/check-rojo.svg" alt="" width="20" height="20" />Confirmá que la tarjeta tenga saldo o límite disponible.</li>
+          <li><img src="../assets/iconos/check-rojo.svg" alt="" width="20" height="20" />Probá con otro medio de pago: transferencia o billetera virtual.</li>
         </ul>
-
         <div class="error-summary" data-error-summary hidden>
           <p class="summary-eyebrow">RESUMEN DEL PEDIDO</p>
           <dl class="summary-lines">
@@ -55,14 +51,12 @@
             </div>
           </dl>
         </div>
-
         <div class="btn-group-rc">
-          <a class="btn-rc btn-rc--red" href="index.html#checkout">Intentar de nuevo</a>
-          <a class="btn-rc btn-rc--ghost" href="index.html">Volver al inicio</a>
+          <a class="btn-rc btn-rc--red" href="../index.html#checkout">Intentar de nuevo</a>
+          <a class="btn-rc btn-rc--ghost" href="../index.html">Volver al inicio</a>
         </div>
       </section>
     </main>
-
     <script src="js/modules/utils.js" defer></script>
     <script src="js/modules/pricing.js" defer></script>
     <script src="js/modules/payment-error.js" defer></script>
