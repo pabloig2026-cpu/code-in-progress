@@ -39,7 +39,7 @@
       toggle.setAttribute('aria-label', `Cambiar a modo ${isLight ? 'oscuro' : 'claro'}`);
       if (themeColor) themeColor.content = assets.color;
       logos.forEach((logo) => {
-        logo.src = assets.logo;
+        logo.src = logo.dataset[`logo${isLight ? 'Light' : 'Dark'}`] || assets.logo;
       });
 
       if (persist) {

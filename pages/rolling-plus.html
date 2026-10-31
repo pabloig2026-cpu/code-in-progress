@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0b0c" />
+    <meta
+      name="description"
+      content="Elegí tu plan Rolling+ y potenciá tu carrera con cursos, workshops y contenidos exclusivos."
+    />
+    <title>Planes Rolling+ · Rolling Code School</title>
+    <script>
+      try {
+        const savedTheme = localStorage.getItem("rc-theme");
+        if (savedTheme === "light" || savedTheme === "dark") {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch (error) {
+        console.warn("No se pudo recuperar el tema guardado.", error);
+      }
+    </script>
+    <link rel="icon" href="../assets/logo/favicon.jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style/styles.css" />
+    <link rel="stylesheet" href="../style/rolling-plus.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+    <header class="site-header">
+      <nav class="container-rc plus-navbar" aria-label="Principal">
+        <a class="brand plus-brand" href="../index.html" aria-label="Volver al inicio">
+          <img
+            src="../assets/logo/logo-rolling-blanco.png"
+            data-logo-dark="../assets/logo/logo-rolling-blanco.png"
+            data-logo-light="../assets/logo/logo-rolling-negro.png"
+            alt="Rolling Code School"
+            width="158"
+            height="52"
+          />
+        </a>
+        <div class="plus-header-actions">
+          <a class="btn-rc btn-rc--ghost btn-rc--sm plus-back-link" href="../index.html">
+            Volver al evento
+          </a>
+          <button
+            class="theme-switch"
+            type="button"
+            role="switch"
+            aria-checked="false"
+            aria-label="Cambiar a modo claro"
+            data-theme-toggle
+          >
+            <span class="theme-switch-track" aria-hidden="true">
+              <svg class="theme-switch-icon theme-switch-icon--moon" viewBox="0 0 16 16" focusable="false">
+                <path d="M13.2 10.8A6 6 0 0 1 5.2 2.8a6.1 6.1 0 1 0 8 8Z" />
+              </svg>
+              <svg class="theme-switch-icon theme-switch-icon--sun" viewBox="0 0 16 16" focusable="false">
+                <circle cx="8" cy="8" r="3" />
+                <path d="M8 1v1.5M8 13.5V15M1 8h1.5M13.5 8H15M3.05 3.05l1.06 1.06m7.78 7.78 1.06 1.06m0-9.9-1.06 1.06m-7.78 7.78-1.06 1.06" />
+              </svg>
+              <span class="theme-switch-thumb"></span>
+            </span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="rollingplus-page" id="main">
+      <section class="rollingplus-content" aria-labelledby="rollingplus-title">
+        <header class="rollingplus-heading">
+          <p class="rollingplus-eyebrow">Rolling Code School</p>
+          <h1 id="rollingplus-title">
+            Elegí el plan perfecto para potenciar tu carrera
+          </h1>
+          <p>
+            Acceso ilimitado a contenidos premium, workshops en vivo,
+            grabaciones y beneficios exclusivos pensados para tu evolución
+            tecnológica.
+          </p>
+        </header>
+
+        <div class="rollingplus-plans">
+          <article class="rollingplus-card rollingplus-card--recommended">
+            <span class="rollingplus-badge rollingplus-badge--recommended">
+              Recomendado
+            </span>
+            <p class="rollingplus-category">Individuos</p>
+            <img
+              class="rollingplus-logo rollingplus-logo--dark"
+              src="../assets/rollingPlus/rollingplus_negativo@3x.png"
+              alt="Rolling+"
+              width="230"
+              height="49"
+            />
+            <img
+              class="rollingplus-logo rollingplus-logo--light"
+              src="../assets/rollingPlus/rollingplus_positivo@3x.png"
+              alt=""
+              width="230"
+              height="49"
+              aria-hidden="true"
+            />
+            <p class="rollingplus-price">
+              <span class="rollingplus-price-currency">$</span>14.950
+              <span class="rollingplus-price-caption">/por tiempo limitado</span>
+            </p>
+            <p class="rollingplus-savings">
+              <span aria-hidden="true">◆</span> Ahorrá hasta $350.000 en cursos
+            </p>
+            <div class="rollingplus-divider"></div>
+            <h2 class="rollingplus-list-title">Qué incluye este plan:</h2>
+            <ul class="rollingplus-features">
+              <li>Acceso ilimitado a todos los cursos de Universe</li>
+              <li>Grabaciones completas de todos los Workshops</li>
+              <li>Descuentos exclusivos en formaciones avanzadas</li>
+              <li>Prioridad de inscripción en nuevos cursos y talleres</li>
+              <li>Certificados de finalización verificables</li>
+              <li>Ahorra hasta $350.000 en catálogo de contenidos</li>
+            </ul>
+            <button
+              class="rollingplus-subscribe"
+              type="button"
+              aria-label="Suscribirse a Rolling+"
+            >
+              Suscribirse a
+              <img
+                class="rollingplus-button-logo rollingplus-logo--dark"
+                src="../assets/rollingPlus/rollingplus_negativo@3x.png"
+                alt=""
+                width="104"
+                height="22"
+                aria-hidden="true"
+              />
+              <img
+                class="rollingplus-button-logo rollingplus-logo--light"
+                src="../assets/rollingPlus/rollingplus_positivo@3x.png"
+                alt=""
+                width="104"
+                height="22"
+                aria-hidden="true"
+              />
+            </button>
+          </article>
+
+          <article class="rollingplus-card rollingplus-card--enterprise">
+            <span class="rollingplus-badge rollingplus-badge--soon">
+              Próximamente
+            </span>
+            <p class="rollingplus-category">Empresas &amp; equipos</p>
+            <h2 class="rollingplus-enterprise-title">
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M3 2h14v16H3zM6 5h2v2H6zm6 0h2v2h-2zM6 9h2v2H6zm6 0h2v2h-2zm-6 4h2v2H6zm6 0h2v2h-2zm-1 5v-3h-2v3z" />
+              </svg>
+              RollingCode Enterprise
+            </h2>
+            <p class="rollingplus-custom-price">
+              A medida
+              <span>/consultoría personalizada</span>
+            </p>
+            <p class="rollingplus-enterprise-copy">
+              Acceso a cursos exclusivos adaptados para tu organización,
+              mentorías en vivo y mucho más (próximamente).
+            </p>
+            <p class="rollingplus-corporate">Solución corporativa</p>
+            <div class="rollingplus-divider"></div>
+            <h3 class="rollingplus-list-title">
+              Características para equipos:
+            </h3>
+            <ul class="rollingplus-features rollingplus-features--muted">
+              <li>Cursos exclusivos adaptados a tu organización</li>
+              <li>Mentorías técnicas personalizadas en vivo</li>
+              <li>Panel de seguimiento y métricas de desempeño</li>
+              <li>Onboarding corporativo y soporte prioritario</li>
+              <li>Rutas de aprendizaje a la medida de tu equipo</li>
+            </ul>
+            <button
+              class="rollingplus-subscribe rollingplus-subscribe--disabled"
+              type="button"
+              disabled
+            >
+              <span aria-hidden="true">●</span> Próximamente
+            </button>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="../js/modules/header.js" defer></script>
+    <script src="../js/main.js" defer></script>
+  </body>
+</html>
