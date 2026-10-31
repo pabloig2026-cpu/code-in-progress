@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,8 +10,17 @@
       name="description"
       content="Workshop de Rolling Code School: diez charlas cortas para ordenar tus primeros pasos en programación. Jueves 19/11, 18.00 hs."
     />
+    <meta name="theme-color" content="#0b0b0c" />
     <script>
       document.documentElement.classList.add("js");
+      try {
+        const savedTheme = localStorage.getItem("rc-theme");
+        if (savedTheme === "light" || savedTheme === "dark") {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch (error) {
+        console.warn("No se pudo recuperar el tema guardado.", error);
+      }
     </script>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='white' stroke-width='5'%3E%3Ccircle cx='32' cy='32' r='28'/%3E%3Cpath d='M27 22 15 32 27 42M37 22 49 32 37 42'/%3E%3C/g%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,10 +36,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./style/styles.css" />
-    <link rel="stylesheet" href="./style/404.css" />
   </head>
   <body>
-    <script src="../code-in-progress/js/main.js"></script>
     <a class="skip-link" href="#main">Saltar al contenido</a>
     <header class="site-header">
       <nav class="navbar navbar-expand-lg container-rc" aria-label="Principal">
@@ -59,7 +66,6 @@
             ></span>
           </button>
         </div>
-        <!-- Móvil: panel que entra de derecha a izquierda. Escritorio: menú horizontal -->
         <div
           class="offcanvas-lg offcanvas-end rc-offcanvas"
           tabindex="-1"
@@ -79,6 +85,30 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#ubicacion">Cómo llegar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/rolling-plus.html">Rolling+</a>
+              </li>
+              <li class="nav-item theme-switch-item">
+                <button
+                  class="theme-switch"
+                  type="button"
+                  role="switch"
+                  aria-checked="false"
+                  aria-label="Cambiar a modo claro"
+                  data-theme-toggle
+                >
+                  <span class="theme-switch-track" aria-hidden="true">
+                    <svg class="theme-switch-icon theme-switch-icon--moon" viewBox="0 0 16 16" focusable="false">
+                      <path d="M13.2 10.8A6 6 0 0 1 5.2 2.8a6.1 6.1 0 1 0 8 8Z" />
+                    </svg>
+                    <svg class="theme-switch-icon theme-switch-icon--sun" viewBox="0 0 16 16" focusable="false">
+                      <circle cx="8" cy="8" r="3" />
+                      <path d="M8 1v1.5M8 13.5V15M1 8h1.5M13.5 8H15M3.05 3.05l1.06 1.06m7.78 7.78 1.06 1.06m0-9.9-1.06 1.06m-7.78 7.78-1.06 1.06" />
+                    </svg>
+                    <span class="theme-switch-thumb"></span>
+                  </span>
+                </button>
               </li>
               <li class="nav-item nav-item--cta">
                 <a class="btn-rc btn-rc--red" href="#entradas"
@@ -167,12 +197,11 @@
                   <li class="chip">Virtual</li>
                   <li class="chip chip--red">Cupos limitados</li>
                 </ul>
-
               </aside>
             </div>
           </div>
         <button class="chat-ai-button" type="button" aria-label="Abrir chat con IA">
-          <img src="./assets/img_charlas/ia chat.png" alt="" width="35" height="35" />
+          <img src="./assets/iconos/dino-happy.svg" alt="" width="35" height="35" />
         </button>
         <aside class="chat-ai-panel" aria-label="Chat con IA" aria-hidden="true">
           <header class="chat-ai-header">
@@ -219,15 +248,7 @@
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      <section
-        class="section container-rc"
-        id="speakers"
-        aria-labelledby="speakers-title"
-      >
-=======
       <section class="section container-rc" id="speakers" aria-labelledby="speakers-title">
->>>>>>> 4175bdb (fix eliminacion de comentarios, correccion de link de estructura general)
         <div class="section-head reveal">
           <p class="eyebrow">SPEAKERS</p>
           <h2 class="section-title" id="speakers-title">
@@ -315,7 +336,7 @@
             <article
               class="speaker-card"
               data-speaker-id="3"
-              data-speaker-name="Gaston"
+              data-speaker-name="Gaston Roger"
               data-speaker-talk="Armá tu portfolio con IA"
               data-speaker-time="19:00"
               data-speaker-description="Cómo usar asistentes de IA para construir y publicar un portfolio que muestre lo que sabés hacer."
@@ -323,7 +344,7 @@
               <div class="speaker-photo">
                 <img
                   src="assets/speakers/speaker-03-gaston.jpeg"
-                  alt="Foto de Gaston"
+                  alt="Foto de Gaston Roger"
                   width="576"
                   height="576"
                   loading="lazy"
@@ -339,7 +360,7 @@
                   data-open-speaker="3"
                   aria-haspopup="dialog"
                 >
-                  Gaston
+                  Gaston Roger
                 </button>
               </h3>
               <p class="speaker-tag">Armá tu portfolio con IA</p>
@@ -353,7 +374,7 @@
             <article
               class="speaker-card"
               data-speaker-id="4"
-              data-speaker-name="Mauro"
+              data-speaker-name="Mauro Coniglio"
               data-speaker-talk="Git y GitHub sin miedo"
               data-speaker-time="19:20"
               data-speaker-description="Los comandos que vas a usar todos los días y cómo trabajar en equipo sin pisar el código de otros."
@@ -361,7 +382,7 @@
               <div class="speaker-photo">
                 <img
                   src="assets/speakers/speaker-04-mauro.jpeg"
-                  alt="Foto de Mauro"
+                  alt="Foto de Mauro Coniglio"
                   width="576"
                   height="576"
                   loading="lazy"
@@ -377,7 +398,7 @@
                   data-open-speaker="4"
                   aria-haspopup="dialog"
                 >
-                  Mauro
+                  Mauro Coniglio
                 </button>
               </h3>
               <p class="speaker-tag">Git y GitHub sin miedo</p>
@@ -660,15 +681,7 @@
           </button>
         </div>
       </section>
-<<<<<<< HEAD
-      <section
-        class="section container-rc"
-        id="agenda"
-        aria-labelledby="agenda-title"
-      >
-=======
       <section class="section container-rc" id="agenda" aria-labelledby="agenda-title">
->>>>>>> 4175bdb (fix eliminacion de comentarios, correccion de link de estructura general)
         <div class="row g-4 g-lg-5">
           <div class="col-12 col-lg-4 reveal">
             <p class="eyebrow">AGENDA</p>
@@ -729,7 +742,7 @@
                   aria-haspopup="dialog"
                 >
                   <span class="agenda-title">Armá tu portfolio con IA</span>
-                  <span class="agenda-speaker">Gaston</span>
+                  <span class="agenda-speaker">Gaston Roger</span>
                 </button>
               </li>
               <li class="agenda-row agenda-row--talk" data-agenda-speaker="4">
@@ -743,7 +756,7 @@
                   aria-haspopup="dialog"
                 >
                   <span class="agenda-title">Git y GitHub sin miedo</span>
-                  <span class="agenda-speaker">Mauro</span>
+                  <span class="agenda-speaker">Mauro Coniglio</span>
                 </button>
               </li>
               <li class="agenda-row agenda-row--talk" data-agenda-speaker="5">
@@ -844,22 +857,11 @@
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-            <section
-        class="section container-rc"
-        id="sponsors"
-        aria-labelledby="sponsors-title"
-      >
-        <div class="section-head reveal">
-          <p class="eyebrow">SPONSORS</p>
-          <h2 class="section-title" id="sponsors-title">Empresas que impulsan el talento IT</h2>
-=======
       <section class="section container-rc" id="sponsors" aria-labelledby="sponsors-title">
         <div class="section-head reveal">
           <p class="eyebrow">SPONSORS</p>
           <h2 class="section-title" id="sponsors-title">Empresas que impulsan el talento IT</h2>
           <p class="section-note">Logos ilustrativos: reemplazar por los oficiales cuando el cliente los entregue.</p>
->>>>>>> 4175bdb (fix eliminacion de comentarios, correccion de link de estructura general)
         </div>
         <div class="tier tier--red">
           <div class="tier-head reveal"><span class="tier-icon" aria-hidden="true">◆</span><div><div class="tier-title"><h3>MAIN PARTNERS</h3><span class="tier-badge">TIER DIAMANTE</span></div><p class="tier-text">Presencia estelar en conferencias, stands experienciales y becas formativas</p></div></div>
@@ -892,109 +894,7 @@
           </ul>
         </div>
       </section>
-      <section 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<<<<<<< HEAD
-      <section
-        class="section container-rc"
-        id="entradas"
-        aria-labelledby="entradas-title"
-      >
-=======
       <section class="section container-rc" id="entradas" aria-labelledby="entradas-title">
->>>>>>> 4175bdb (fix eliminacion de comentarios, correccion de link de estructura general)
         <div class="section-head reveal">
           <p class="eyebrow">ENTRADAS</p>
           <h2 class="section-title" id="entradas-title">
@@ -1231,15 +1131,7 @@
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      <section
-        class="section container-rc"
-        id="checkout"
-        aria-labelledby="checkout-title"
-      >
-=======
       <section class="section container-rc" id="checkout" aria-labelledby="checkout-title">
->>>>>>> 4175bdb (fix eliminacion de comentarios, correccion de link de estructura general)
         <div class="checkout reveal">
           <p class="checkout-eyebrow">
             <img
@@ -1509,24 +1401,9 @@
                     disabled
                   >
                     <legend class="visually-hidden">Transferencia</legend>
-<<<<<<< HEAD
-                    <p class="pay-note">
-                      Transferí el total al alias
-                      <strong>ALIAS.PLACEHOLDER</strong> y enviá el comprobante
-                      al email de la compra.
-                    </p>
-                  </fieldset>
-                  <fieldset
-                    class="pay-panel"
-                    data-payment-panel="wallet"
-                    hidden
-                    disabled
-                  >
-=======
                     <p class="pay-note">Transferí el total al alias <strong>ALIAS.PLACEHOLDER</strong> y enviá el comprobante al email de la compra.</p>
                   </fieldset>
                   <fieldset class="pay-panel" data-payment-panel="wallet" hidden disabled>
->>>>>>> 4175bdb (fix eliminacion de comentarios, correccion de link de estructura general)
                     <legend class="visually-hidden">Billetera virtual</legend>
                     <p class="pay-note">
                       Al confirmar te enviamos por email el link para pagar
@@ -1596,15 +1473,7 @@
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      <section
-        class="section container-rc"
-        id="sumate-sponsor"
-        aria-labelledby="sumate-title"
-      >
-=======
       <section class="section container-rc" id="sumate-sponsor" aria-labelledby="sumate-title">
->>>>>>> 4175bdb (fix eliminacion de comentarios, correccion de link de estructura general)
         <div class="sumate-head reveal">
           <h2 class="sumate-title" id="sumate-title">Sumate como Sponsor</h2>
           <p class="sumate-text">
@@ -1830,24 +1699,8 @@
               </div>
             </div>
           </form>
-<<<<<<< HEAD
-          <div
-            class="sponsor-success"
-            data-sponsor-success
-            hidden
-            tabindex="-1"
-            role="status"
-          >
-            <img
-              src="assets/iconos/check-circulo.svg"
-              alt=""
-              width="64"
-              height="64"
-            />
-=======
           <div class="sponsor-success" data-sponsor-success hidden tabindex="-1" role="status">
             <img src="assets/iconos/check-circulo.svg" alt="" width="64" height="64" />
->>>>>>> 4175bdb (fix eliminacion de comentarios, correccion de link de estructura general)
             <h3 class="success-title">¡Postulación enviada!</h3>
             <dl class="sponsor-success-list">
               <div>
@@ -1872,15 +1725,7 @@
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      <section
-        class="section container-rc"
-        id="ubicacion"
-        aria-labelledby="ubicacion-title"
-      >
-=======
       <section class="section container-rc" id="ubicacion" aria-labelledby="ubicacion-title">
->>>>>>> 4175bdb (fix eliminacion de comentarios, correccion de link de estructura general)
         <div class="row g-4 g-lg-5 align-items-center">
           <div class="col-12 col-lg-5 reveal">
             <p class="eyebrow">CÓMO LLEGAR</p>
@@ -1899,7 +1744,7 @@
             <div class="btn-group-rc">
               <a
                 class="btn-rc btn-rc--ghost"
-                href="https://www.openstreetmap.org/search?query=Gral.%20Paz%20576%2C%20San%20Miguel%20de%20Tucum%C3%A1n"
+                href="https://www.openstreetmap.org/search?query=Calle%20Gral.%20Paz%20576%2C%20San%20Miguel%20de%20Tucum%C3%A1n"
                 target="_blank"
                 rel="noopener"
                 >Abrir en el mapa<span class="visually-hidden">
@@ -1913,8 +1758,8 @@
             <div class="map">
               <iframe
                 class="map-frame"
-                title="Mapa: Rolling Code School, Gral. Paz 576, San Miguel de Tucumán"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=-65.2127%2C-26.8366%2C-65.2027%2C-26.8306&amp;layer=mapnik&amp;marker=-26.8336%2C-65.2077"
+                title="Mapa: Rolling Code School, Calle Gral. Paz 576, San Miguel de Tucumán"
+                src="https://maps.google.com/maps?q=Calle%20Gral.%20Paz%20576%2C%204000%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n%2C%20Argentina&amp;output=embed"
                 loading="lazy"
                 referrerpolicy="no-referrer"
               ></iframe>
@@ -1928,7 +1773,7 @@
                 <div>
                   <p class="map-card-title">Rolling Code School</p>
                   <p class="map-card-sub">
-                    Gral. Paz 576 · San Miguel de Tucumán
+                    Calle Gral. Paz 576 · San Miguel de Tucumán
                   </p>
                 </div>
               </div>
@@ -1948,59 +1793,6 @@
           />
         </a>
         <ul class="socials" aria-label="Redes sociales">
-<<<<<<< HEAD
-          <li>
-            <a class="social" href="./pages/404.html" aria-label="Instagram"
-              ><img
-                src="assets/iconos/instagram.svg"
-                alt=""
-                width="20"
-                height="20"
-            /></a>
-          </li>
-          <li>
-            <a class="social" href="./pages/404.html" aria-label="Facebook"
-              ><img
-                src="assets/iconos/facebook.svg"
-                alt=""
-                width="20"
-                height="20"
-            /></a>
-          </li>
-          <li>
-            <a class="social" href="./pages/404.html" aria-label="LinkedIn"
-              ><img
-                src="assets/iconos/linkedin.svg"
-                alt=""
-                width="20"
-                height="20"
-            /></a>
-          </li>
-          <li>
-            <a class="social" href="./pages/404.html" aria-label="YouTube"
-              ><img
-                src="assets/iconos/youtube.svg"
-                alt=""
-                width="20"
-                height="20"
-            /></a>
-          </li>
-          <li>
-            <a class="social" href="./pages/404.html" aria-label="X"
-              ><img src="assets/iconos/x.svg" alt="" width="20" height="20"
-            /></a>
-          </li>
-        </ul>
-      </div>
-    </footer>
-    <div
-      class="modal fade"
-      id="speakerModal"
-      tabindex="-1"
-      aria-labelledby="speakerModalName"
-      aria-hidden="true"
-    >
-=======
           <li><a class="social" href="./pages/404.html" aria-label="Instagram"><img src="assets/iconos/instagram.svg" alt="" width="20" height="20" /></a></li>
           <li><a class="social" href="./pages/404.html" aria-label="Facebook"><img src="assets/iconos/facebook.svg" alt="" width="20" height="20" /></a></li>
           <li><a class="social" href="./pages/404.html" aria-label="LinkedIn"><img src="assets/iconos/linkedin.svg" alt="" width="20" height="20" /></a></li>
@@ -2010,7 +1802,6 @@
       </div>
     </footer>
     <div class="modal fade" id="speakerModal" tabindex="-1" aria-labelledby="speakerModalName" aria-hidden="true">
->>>>>>> 4175bdb (fix eliminacion de comentarios, correccion de link de estructura general)
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content speaker-modal">
           <button
@@ -2054,17 +1845,7 @@
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-    <div
-      class="modal fade"
-      id="paymentErrorModal"
-      tabindex="-1"
-      aria-labelledby="paymentErrorTitle"
-      aria-hidden="true"
-    >
-=======
     <div class="modal fade" id="paymentErrorModal" tabindex="-1" aria-labelledby="paymentErrorTitle" aria-hidden="true">
->>>>>>> 4175bdb (fix eliminacion de comentarios, correccion de link de estructura general)
       <div class="modal-dialog modal-dialog-centered">
         <div
           class="modal-content error-card error-modal"
