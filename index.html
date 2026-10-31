@@ -88,6 +88,7 @@
             </ul>
           </div>
         </div>
+        <div><img src="" alt="" /></div>
       </nav>
     </header>
 
@@ -166,9 +167,32 @@
                   <li class="chip">Virtual</li>
                   <li class="chip chip--red">Cupos limitados</li>
                 </ul>
+
               </aside>
             </div>
           </div>
+        <button class="chat-ai-button" type="button" aria-label="Abrir chat con IA">
+          <img src="./assets/img_charlas/ia chat.png" alt="" width="35" height="35" />
+        </button>
+        <aside class="chat-ai-panel" aria-label="Chat con IA" aria-hidden="true">
+          <header class="chat-ai-header">
+            <div>
+              <strong>Asistente Rolling Code</strong>
+              <span>En línea</span>
+            </div>
+            <button class="chat-ai-close" type="button" aria-label="Cerrar chat">×</button>
+          </header>
+          <div class="chat-ai-messages" role="log" aria-live="polite">
+            <div class="chat-ai-message chat-ai-message--assistant">
+              Hola, soy el asistente del evento. ¿En qué puedo ayudarte?
+            </div>
+          </div>
+          <form class="chat-ai-form">
+            <label class="visually-hidden" for="chat-ai-input">Escribir mensaje</label>
+            <input id="chat-ai-input" class="chat-ai-input" type="text" autocomplete="off" placeholder="Escribí tu mensaje..." />
+            <button class="chat-ai-send" type="submit" aria-label="Enviar mensaje">➤</button>
+          </form>
+        </aside>
         </div>
       </section>
       <section class="section container-rc" aria-label="Datos clave">
@@ -821,20 +845,14 @@
         </div>
       </section>
 <<<<<<< HEAD
-      <section
+            <section
         class="section container-rc"
         id="sponsors"
         aria-labelledby="sponsors-title"
       >
         <div class="section-head reveal">
           <p class="eyebrow">SPONSORS</p>
-          <h2 class="section-title" id="sponsors-title">
-            Empresas que impulsan el talento IT
-          </h2>
-          <p class="section-note">
-            Logos ilustrativos: reemplazar por los oficiales cuando el cliente
-            los entregue.
-          </p>
+          <h2 class="section-title" id="sponsors-title">Empresas que impulsan el talento IT</h2>
 =======
       <section class="section container-rc" id="sponsors" aria-labelledby="sponsors-title">
         <div class="section-head reveal">
@@ -844,272 +862,130 @@
 >>>>>>> 4175bdb (fix eliminacion de comentarios, correccion de link de estructura general)
         </div>
         <div class="tier tier--red">
-          <div class="tier-head reveal">
-            <span class="tier-icon" aria-hidden="true">
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M3 8l4.5 4L12 5l4.5 7L21 8l-2 11H5z" />
-              </svg>
-            </span>
-            <div>
-              <div class="tier-title">
-                <h3>MAIN PARTNERS</h3>
-                <span class="tier-badge">TIER DIAMANTE</span>
-              </div>
-              <p class="tier-text">
-                Presencia estelar en conferencias, stands experienciales y becas
-                formativas
-              </p>
-            </div>
-          </div>
+          <div class="tier-head reveal"><span class="tier-icon" aria-hidden="true">◆</span><div><div class="tier-title"><h3>MAIN PARTNERS</h3><span class="tier-badge">TIER DIAMANTE</span></div><p class="tier-text">Presencia estelar en conferencias, stands experienciales y becas formativas</p></div></div>
           <ul class="sponsor-grid sponsor-grid--main">
-            <li class="reveal">
-              <a class="sponsor-main sponsor-main--red" href="#sumate-sponsor">
-                <span class="sponsor-top">
-                  <span class="sponsor-tag">LEAD CLOUD PARTNER</span>
-                  <span class="sponsor-arrow" aria-hidden="true"
-                    ><svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.4"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M7 17 17 7M8 7h9v9" /></svg
-                  ></span>
-                </span>
-                <span class="sponsor-logo sponsor-logo--xl" aria-hidden="true"
-                  >GC</span
-                >
-                <h4 class="sponsor-main-name">Google Cloud</h4>
-                <p class="sponsor-main-text">
-                  Infraestructura global ultra-escalable, Gemini AI APIs y
-                  programas de formación profesional para devs.
-                </p>
-                <span class="sponsor-foot"
-                  ><span>Cloud &amp; AI</span><b>100% Verified</b></span
-                >
-              </a>
-            </li>
-            <li class="reveal">
-              <a
-                class="sponsor-main sponsor-main--bronze"
-                href="#sumate-sponsor"
-              >
-                <span class="sponsor-top">
-                  <span class="sponsor-tag">INFRASTRUCTURE PARTNER</span>
-                  <span class="sponsor-arrow" aria-hidden="true"
-                    ><svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.4"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M7 17 17 7M8 7h9v9" /></svg
-                  ></span>
-                </span>
-                <span class="sponsor-logo sponsor-logo--xl" aria-hidden="true"
-                  >AWS</span
-                >
-                <h4 class="sponsor-main-name">Amazon Web Services</h4>
-                <p class="sponsor-main-text">
-                  Servicios de nube, arquitecturas serverless y vouchers para
-                  certificaciones oficiales para la comunidad.
-                </p>
-                <span class="sponsor-foot"
-                  ><span>Cloud Hosting</span><b>Global Leader</b></span
-                >
-              </a>
-            </li>
-            <li class="reveal">
-              <a class="sponsor-main sponsor-main--gold" href="#sumate-sponsor">
-                <span class="sponsor-top">
-                  <span class="sponsor-tag">FINTECH &amp; E-COMMERCE</span>
-                  <span class="sponsor-arrow" aria-hidden="true"
-                    ><svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.4"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M7 17 17 7M8 7h9v9" /></svg
-                  ></span>
-                </span>
-                <span class="sponsor-logo sponsor-logo--xl" aria-hidden="true"
-                  >ML</span
-                >
-                <h4 class="sponsor-main-name">Mercado Libre</h4>
-                <p class="sponsor-main-text">
-                  El mayor ecosistema tech de Latinoamérica impulsando becas,
-                  hackathons y pasantías directas de empleo.
-                </p>
-                <span class="sponsor-foot"
-                  ><span>Fintech Scale</span><b>Unicorn LATAM</b></span
-                >
-              </a>
-            </li>
+            <li class="reveal"><a class="sponsor-main sponsor-main--red" href="#sumate-sponsor"><span class="sponsor-top"><span class="sponsor-tag">LEAD CLOUD PARTNER</span><span class="sponsor-arrow">↗</span></span><span class="sponsor-logo sponsor-logo--xl"><img src="./assets/img_charlas/clau.png" alt="Google Cloud"></span><h4 class="sponsor-main-name">Google Cloud</h4><p class="sponsor-main-text">Infraestructura global ultra-escalable, Gemini AI APIs y programas de formación profesional para devs.</p><span class="sponsor-foot"><span>Cloud &amp; AI</span><b>100% Verified</b></span></a></li>
+            <li class="reveal"><a class="sponsor-main sponsor-main--bronze" href="#sumate-sponsor"><span class="sponsor-top"><span class="sponsor-tag">INFRASTRUCTURE PARTNER</span><span class="sponsor-arrow">↗</span></span><span class="sponsor-logo sponsor-logo--xl"><img src="./assets/img_charlas/amazonok.png" alt="Amazon Web Services"></span><h4 class="sponsor-main-name">Amazon Web Services</h4><p class="sponsor-main-text">Servicios de nube, arquitecturas serverless y vouchers para certificaciones oficiales para la comunidad.</p><span class="sponsor-foot"><span>Cloud Hosting</span><b>Global Leader</b></span></a></li>
+            <li class="reveal"><a class="sponsor-main sponsor-main--gold" href="#sumate-sponsor"><span class="sponsor-top"><span class="sponsor-tag">FINTECH &amp; E-COMMERCE</span><span class="sponsor-arrow">↗</span></span><span class="sponsor-logo sponsor-logo--xl"><img src="./assets/img_charlas/mercado libre ok.png" alt="Mercado Libre"></span><h4 class="sponsor-main-name">Mercado Libre</h4><p class="sponsor-main-text">El mayor ecosistema tech de Latinoamérica impulsando becas, hackathons y pasantías directas de empleo.</p><span class="sponsor-foot"><span>Fintech Scale</span><b>Unicorn LATAM</b></span></a></li>
           </ul>
         </div>
         <div class="tier tier--gold">
-          <div class="tier-head reveal">
-            <span class="tier-icon" aria-hidden="true">
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <circle cx="12" cy="9" r="5" />
-                <path d="M9 13.5 8 21l4-2 4 2-1-7.5" />
-              </svg>
-            </span>
-            <div>
-              <div class="tier-title">
-                <h3>GOLD TIER</h3>
-                <span class="tier-badge">NIVEL ORO</span>
-              </div>
-              <p class="tier-text">
-                Líderes de producto, frameworks y transformación digital global
-              </p>
-            </div>
-          </div>
+          <div class="tier-head reveal"><span class="tier-icon" aria-hidden="true">♕</span><div><div class="tier-title"><h3>GOLD TIER</h3><span class="tier-badge">NIVEL ORO</span></div><p class="tier-text">Líderes de producto, frameworks y transformación digital global</p></div></div>
           <ul class="sponsor-grid sponsor-grid--gold">
-            <li class="sponsor-card reveal">
-              <span class="sponsor-logo" aria-hidden="true">M</span>
-              <h4 class="sponsor-name">Microsoft</h4>
-              <span class="sponsor-sub">Azure &amp; Dev Tools</span
-              ><span class="sponsor-pill">Enterprise</span>
-            </li>
-            <li class="sponsor-card reveal">
-              <span class="sponsor-logo" aria-hidden="true">GH</span>
-              <h4 class="sponsor-name">GitHub</h4>
-              <span class="sponsor-sub">Open Source &amp; Copilot</span
-              ><span class="sponsor-pill">Community</span>
-            </li>
-            <li class="sponsor-card reveal">
-              <span class="sponsor-logo" aria-hidden="true">G</span>
-              <h4 class="sponsor-name">Globant</h4>
-              <span class="sponsor-sub">Tech Reinvention</span
-              ><span class="sponsor-pill">Global Talent</span>
-            </li>
-            <li class="sponsor-card reveal">
-              <span class="sponsor-logo" aria-hidden="true">A0</span>
-              <h4 class="sponsor-name">Auth0</h4>
-              <span class="sponsor-sub">Identity &amp; Security</span
-              ><span class="sponsor-pill">Security</span>
-            </li>
-            <li class="sponsor-card reveal">
-              <span class="sponsor-logo" aria-hidden="true">V</span>
-              <h4 class="sponsor-name">Vercel</h4>
-              <span class="sponsor-sub">Frontend Cloud &amp; Next</span
-              ><span class="sponsor-pill">Deployment</span>
-            </li>
+            <li class="sponsor-card reveal"><span class="sponsor-logo sponsor-logo--sm"><img src="./assets/img_charlas/microsoft.png" alt="Microsoft"></span><h4 class="sponsor-name">Microsoft</h4><span class="sponsor-sub">Azure &amp; Dev Tools</span><span class="sponsor-pill">Enterprise</span></li>
+            <li class="sponsor-card reveal"><span class="sponsor-logo sponsor-logo--sm"><img src="./assets/img_charlas/git hub.png" alt="GitHub"></span><h4 class="sponsor-name">GitHub</h4><span class="sponsor-sub">Open Source &amp; Copilot</span><span class="sponsor-pill">Community</span></li>
+            <li class="sponsor-card reveal"><span class="sponsor-logo sponsor-logo--sm"><img src="./assets/img_charlas/globant.png" alt="Globant"></span><h4 class="sponsor-name">Globant</h4><span class="sponsor-sub">Tech Reinvention</span><span class="sponsor-pill">Global Talent</span></li>
+            <li class="sponsor-card reveal"><span class="sponsor-logo sponsor-logo--sm"><img src="./assets/img_charlas/auth0.png" alt="Auth0"></span><h4 class="sponsor-name">Auth0</h4><span class="sponsor-sub">Identity &amp; Security</span><span class="sponsor-pill">Security</span></li>
+            <li class="sponsor-card reveal"><span class="sponsor-logo sponsor-logo--sm"><img src="./assets/img_charlas/vercel.png" alt="Vercel"></span><h4 class="sponsor-name">Vercel</h4><span class="sponsor-sub">Frontend Cloud &amp; Next</span><span class="sponsor-pill">Deployment</span></li>
           </ul>
         </div>
         <div class="tier tier--bronze">
-          <div class="tier-head reveal">
-            <span class="tier-icon" aria-hidden="true">
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m12 3 9 5-9 5-9-5z" />
-                <path d="m3 13 9 5 9-5M3 17.5l9 5 9-5" />
-              </svg>
-            </span>
-            <div>
-              <div class="tier-title">
-                <h3>BRONZE TIER</h3>
-                <span class="tier-badge">NIVEL BRONCE</span>
-              </div>
-              <p class="tier-text">
-                Herramientas y plataformas predilectas de la comunidad de
-                desarrolladores
-              </p>
-            </div>
-          </div>
+          <div class="tier-head reveal"><span class="tier-icon" aria-hidden="true">⬡</span><div><div class="tier-title"><h3>BRONZE TIER</h3><span class="tier-badge">NIVEL BRONCE</span></div><p class="tier-text">Herramientas y plataformas predilectas de la comunidad de desarrolladores</p></div></div>
           <ul class="sponsor-grid sponsor-grid--bronze">
-            <li class="sponsor-card sponsor-card--sm reveal">
-              <span class="sponsor-logo sponsor-logo--sm" aria-hidden="true"
-                >Su</span
-              >
-              <h4 class="sponsor-name">Supabase</h4>
-              <span class="sponsor-sub">Open-source DB</span>
-            </li>
-            <li class="sponsor-card sponsor-card--sm reveal">
-              <span class="sponsor-logo sponsor-logo--sm" aria-hidden="true"
-                >DO</span
-              >
-              <h4 class="sponsor-name">DigitalOcean</h4>
-              <span class="sponsor-sub">Cloud VPS</span>
-            </li>
-            <li class="sponsor-card sponsor-card--sm reveal">
-              <span class="sponsor-logo sponsor-logo--sm" aria-hidden="true"
-                >CF</span
-              >
-              <h4 class="sponsor-name">Cloudflare</h4>
-              <span class="sponsor-sub">Edge &amp; DNS</span>
-            </li>
-            <li class="sponsor-card sponsor-card--sm reveal">
-              <span class="sponsor-logo sponsor-logo--sm" aria-hidden="true"
-                >Mg</span
-              >
-              <h4 class="sponsor-name">MongoDB</h4>
-              <span class="sponsor-sub">Document DB</span>
-            </li>
-            <li class="sponsor-card sponsor-card--sm reveal">
-              <span class="sponsor-logo sponsor-logo--sm" aria-hidden="true"
-                >Dk</span
-              >
-              <h4 class="sponsor-name">Docker</h4>
-              <span class="sponsor-sub">Containers</span>
-            </li>
-            <li class="sponsor-card sponsor-card--sm reveal">
-              <span class="sponsor-logo sponsor-logo--sm" aria-hidden="true"
-                >S</span
-              >
-              <h4 class="sponsor-name">Stripe</h4>
-              <span class="sponsor-sub">Payments API</span>
-            </li>
-            <li class="sponsor-card sponsor-card--sm reveal">
-              <span class="sponsor-logo sponsor-logo--sm" aria-hidden="true"
-                >Pm</span
-              >
-              <h4 class="sponsor-name">Postman</h4>
-              <span class="sponsor-sub">API Platform</span>
-            </li>
+            <li class="sponsor-card sponsor-card--sm reveal"><span class="sponsor-logo sponsor-logo--sm"><img src="./assets/img_charlas/supabase.png" alt="Supabase"></span><h4 class="sponsor-name">Supabase</h4><span class="sponsor-sub">Open-source DB</span></li>
+            <li class="sponsor-card sponsor-card--sm reveal"><span class="sponsor-logo sponsor-logo--sm"><img src="./assets/img_charlas/digitalocean.png" alt="DigitalOcean"></span><h4 class="sponsor-name">DigitalOcean</h4><span class="sponsor-sub">Cloud VPS</span></li>
+            <li class="sponsor-card sponsor-card--sm reveal"><span class="sponsor-logo sponsor-logo--sm"><img src="./assets/img_charlas/cloudflare.png" alt="Cloudflare"></span><h4 class="sponsor-name">Cloudflare</h4><span class="sponsor-sub">Edge &amp; DNS</span></li>
+            <li class="sponsor-card sponsor-card--sm reveal"><span class="sponsor-logo sponsor-logo--sm"><img src="./assets/img_charlas/mongo db.png" alt="MongoDB"></span><h4 class="sponsor-name">MongoDB</h4><span class="sponsor-sub">Document DB</span></li>
+            <li class="sponsor-card sponsor-card--sm reveal"><span class="sponsor-logo sponsor-logo--sm"><img src="./assets/img_charlas/docker.png" alt="Docker"></span><h4 class="sponsor-name">Docker</h4><span class="sponsor-sub">Containers</span></li>
+            <li class="sponsor-card sponsor-card--sm reveal"><span class="sponsor-logo sponsor-logo--sm"><img src="./assets/img_charlas/strpe.png" alt="Stripe"></span><h4 class="sponsor-name">Stripe</h4><span class="sponsor-sub">Payments API</span></li>
+            <li class="sponsor-card sponsor-card--sm reveal"><span class="sponsor-logo sponsor-logo--sm"><img src="./assets/img_charlas/postman.png" alt="Postman"></span><h4 class="sponsor-name">Postman</h4><span class="sponsor-sub">API Platform</span></li>
           </ul>
         </div>
       </section>
+      <section 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <<<<<<< HEAD
       <section
         class="section container-rc"
@@ -2280,6 +2156,7 @@
     <script src="js/modules/checkout.js" defer></script>
     <script src="js/modules/carousel.js" defer></script>
     <script src="js/modules/sponsor-form.js" defer></script>
+    <script src="js/modules/ai-chat.js" defer></script>
     <script src="js/main.js" defer></script>
   </body>
 </html>
